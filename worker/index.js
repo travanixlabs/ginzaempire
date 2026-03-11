@@ -271,18 +271,21 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    // Resolve origin for all requests (including preflight)
+    const origin = getAllowedOrigin(request);
+    const rawOrigin = request.headers.get('Origin');
+    _reqOrigin = origin || ALLOWED_ORIGINS[0];
+
     // CORS preflight
     if (request.method === 'OPTIONS') {
+      if (!origin && rawOrigin) return new Response('Forbidden', { status: 403 });
       return new Response(null, { headers: corsHeaders() });
     }
 
     // Origin check — only allow requests from the site (skip for scheduled triggers)
-    const origin = getAllowedOrigin(request);
-    const rawOrigin = request.headers.get('Origin');
     if (rawOrigin && !origin) {
       return jsonResp({ error: 'forbidden origin' }, 403);
     }
-    _reqOrigin = origin || ALLOWED_ORIGINS[0];
 
     // Rate limiting
     const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
