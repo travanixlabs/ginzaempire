@@ -897,5 +897,11 @@
     "uuid": "v_mmlqrxyr_17pss3h5",
     "timestamp": "2026-03-11T10:14:06.821Z",
     "page": "calendar"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlqrxyr_17pss3h5",
+    "timestamp": "2026-03-11T10:14:24.501Z",
+    "page": "vacation"
   }
 ]
