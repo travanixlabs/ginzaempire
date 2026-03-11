@@ -878,7 +878,7 @@ function renderMyProfilePage(){
   /* Title */
   document.getElementById('mpPageTitle').textContent=isOwnProfile?t('ui.myProfile'):user.toUpperCase()+' – Profile';
 
-  let html='<div class="mp-page-layout">';
+  let html='<div class="mp-page-layout"><div class="mp-page-left">';
   /* User display */
   html+='<div class="mp-user-display"><div class="mp-username">'+user.toUpperCase()+'</div>'+roleBadge+'</div>';
   /* Profile fields */
@@ -913,12 +913,16 @@ function renderMyProfilePage(){
   if(!isAdminView){
     html+='<div class="form-actions" style="margin-top:16px"><button class="btn btn-primary" id="myProfileSave">'+t('form.save')+'</button></div>';
   }
-  html+='</div>';
+  html+='</div>';/* end mp-page-left */
+
+  /* Right side: past bookings */
+  html+='<div class="mp-page-right"><div class="mp-booking-hdr">Past Bookings</div><div id="mpPastBookings"><div class="an-loading"><div class="an-loading-spinner"></div></div></div></div>';
+
+  html+='</div>';/* end mp-page-layout */
   container.innerHTML=html;
 
-  /* Bind girl link */
-  const gl=container.querySelector('.mp-bk-girl-link');
-  if(gl){gl.onclick=e=>{e.preventDefault();const _gi=girls.findIndex(f=>f.name&&f.name.trim().toLowerCase()===gl.dataset.girl.trim().toLowerCase());if(_gi!==-1)showProfile(_gi)}}
+  /* Bind girl links */
+  container.querySelectorAll('.mp-bk-girl-link').forEach(gl=>{gl.onclick=e=>{e.preventDefault();const _gi=girls.findIndex(f=>f.name&&f.name.trim().toLowerCase()===gl.dataset.girl.trim().toLowerCase());if(_gi!==-1)showProfile(_gi)}});
 
   /* Bind save */
   const saveBtn=document.getElementById('myProfileSave');
@@ -939,6 +943,61 @@ function renderMyProfilePage(){
       if(await saveAuth()){showToast(t('ui.profileSaved'))}
     }catch(e){errEl.textContent='Error: '+e.message}finally{saveBtn.textContent=t('form.save');saveBtn.style.pointerEvents='auto'}
   }}
+
+  /* Load past bookings from logs (exclude current booking) */
+  const _excludeBkId=myBk?myBk.id:null;
+  _loadPastBookings(user,_excludeBkId).then(bookings=>{
+    const el=document.getElementById('mpPastBookings');if(!el)return;
+    if(!bookings.length){el.innerHTML='<div class="empty-msg" style="font-size:13px;color:var(--text-dim)">No past bookings.</div>';return}
+    let bhtml='';
+    bookings.forEach(b=>{
+      const f=dispDate(b.date);
+      const dur=b.endMin-b.startMin;
+      const durStr=dur>=60?(dur/60)+'hr'+(dur>60?'s':''):dur+' min';
+      const statusCls=b.status==='approved'?'approved':b.status==='rejected'?'rejected':'pending';
+      const statusLabel=b.status==='approved'?'Approved':b.status==='rejected'?'Rejected':'Pending';
+      bhtml+='<div class="mp-booking-card mp-past-card">';
+      bhtml+='<div class="mp-bk-row"><span class="mp-bk-label">Girl</span><a class="mp-bk-girl-link" data-girl="'+b.girlName.replace(/"/g,'&quot;')+'" href="#">'+b.girlName+'</a></div>';
+      bhtml+='<div class="mp-bk-row"><span class="mp-bk-label">Date</span><span>'+f.day+' '+f.date+'</span></div>';
+      bhtml+='<div class="mp-bk-row"><span class="mp-bk-label">Time</span><span>'+fmtSlotTime(b.startMin)+' – '+fmtSlotTime(b.endMin)+'</span></div>';
+      bhtml+='<div class="mp-bk-row"><span class="mp-bk-label">Duration</span><span>'+durStr+'</span></div>';
+      if(b.totalValue){bhtml+='<div class="mp-bk-row"><span class="mp-bk-label">Value</span><span>$'+b.totalValue+'</span></div>'}
+      bhtml+='<div class="mp-bk-row"><span class="mp-bk-label">Status</span><span class="mp-bk-status mp-bk-status-'+statusCls+'">'+statusLabel+'</span></div>';
+      bhtml+='</div>';
+    });
+    el.innerHTML=bhtml;
+    /* Bind girl links in past bookings */
+    el.querySelectorAll('.mp-bk-girl-link').forEach(gl=>{gl.onclick=e=>{e.preventDefault();const _gi=girls.findIndex(f=>f.name&&f.name.trim().toLowerCase()===gl.dataset.girl.trim().toLowerCase());if(_gi!==-1)showProfile(_gi)}});
+  });
+}
+
+async function _loadPastBookings(user,excludeId){
+  const bookings={};/* bookingId -> latest state */
+  try{
+    const r=await fetch(`${DATA_API}/${BKLP}`,{headers:proxyHeaders()});
+    if(!r.ok)return[];
+    const files=await r.json();
+    if(!Array.isArray(files))return[];
+    const batches=[];
+    for(let i=0;i<files.length;i+=10)batches.push(files.slice(i,i+10));
+    for(const batch of batches){
+      const results=await Promise.all(batch.map(async f=>{
+        try{const fr=await fetch(`${DATA_API}/${BKLP}/${f.name}`,{headers:proxyHeaders()});if(!fr.ok)return[];const d=await fr.json();const parsed=dec(d.content);return Array.isArray(parsed)?parsed:[];}catch(e){return[]}
+      }));
+      results.forEach(entries=>{entries.forEach(e=>{
+        if(!e.bookingId||e.user!==user)return;
+        if(!bookings[e.bookingId])bookings[e.bookingId]={girlName:e.girlName,date:e.date,startMin:e.startMin,endMin:e.endMin,status:e.status||'pending',totalValue:e.totalValue||null};
+        if(e.type==='booking_approved'||(e.type==='booking_admin_created'&&e.status==='approved'))bookings[e.bookingId].status='approved';
+        else if(e.type==='booking_rejected'||e.type==='booking_auto_rejected')bookings[e.bookingId].status='rejected';
+        if(e.startMin!=null)bookings[e.bookingId].startMin=e.startMin;
+        if(e.endMin!=null)bookings[e.bookingId].endMin=e.endMin;
+        if(e.totalValue!=null)bookings[e.bookingId].totalValue=e.totalValue;
+      })});
+    }
+  }catch(e){console.warn('Failed to load past bookings:',e.message)}
+  /* Only approved, exclude current booking, sorted by date desc */
+  if(excludeId)delete bookings[excludeId];
+  return Object.values(bookings).filter(b=>b.status==='approved').sort((a,b)=>a.date!==b.date?b.date.localeCompare(a.date):b.startMin-a.startMin);
 }
 
 /* Auth / Login */

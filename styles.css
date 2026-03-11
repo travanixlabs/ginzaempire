@@ -1269,10 +1269,15 @@ body.vip-mode .girl-card:hover{box-shadow:0 24px 70px rgba(180,74,255,0.2),0 0 0
 .admin-bk-input option{background:#16161e;color:#e0e0e0}
 
 /* ── My Profile Page Layout ── */
-.mp-page-layout{max-width:480px}
+.mp-page-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.mp-page-left{max-width:480px}
+.mp-page-right{max-width:560px}
 .mp-page-form{display:flex;flex-direction:column;gap:4px;margin-top:20px}
+.mp-past-card{margin-bottom:12px}
 .mp-bk-status-approved{color:rgba(80,220,120,.9)}
 .mp-bk-status-pending{color:rgba(255,200,50,.9)}
+.mp-bk-status-rejected{color:rgba(255,70,70,.8)}
+@media(max-width:768px){.mp-page-layout{grid-template-columns:1fr}}
 
 /* ── My Profile — Booking Status Card ── */
 .mp-booking-hdr{font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}
