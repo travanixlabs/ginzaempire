@@ -453,6 +453,16 @@
       "user": "member",
       "status": "pending",
       "ts": "2026-03-11T10:50:38.270Z"
+    },
+    {
+      "id": "mmlx5b3r6ud2ogp5id5",
+      "girlName": "Vanilla",
+      "date": "2026-03-11",
+      "startMin": 1200,
+      "endMin": 1320,
+      "user": "member",
+      "status": "approved",
+      "ts": "2026-03-11T10:51:26.199Z"
     }
   ],
   "Chloe": {
