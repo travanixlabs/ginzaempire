@@ -64,5 +64,11 @@
     "admin": "Ginza Empire",
     "action": "profile_add",
     "target": "Grace"
+  },
+  {
+    "ts": "2026-03-11T09:14:13.345Z",
+    "admin": "Ginza Empire",
+    "action": "profile_add",
+    "target": "Karin"
   }
 ]
