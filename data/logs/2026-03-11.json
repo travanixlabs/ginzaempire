@@ -1991,5 +1991,11 @@
     "uuid": "v_mmlqtplr_6mdfy2au",
     "timestamp": "2026-03-11T11:37:17.377Z",
     "page": "vacation"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlqtplr_6mdfy2au",
+    "timestamp": "2026-03-11T11:37:23.982Z",
+    "page": "bookings"
   }
 ]
