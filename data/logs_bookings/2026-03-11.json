@@ -1,1 +1,14 @@
-
+[
+  {
+    "ts": "2026-03-11T10:49:14.526Z",
+    "type": "booking_admin_created",
+    "bookingId": "mmlx2gc446301huxdrg",
+    "user": "member",
+    "girlName": "Vanilla",
+    "date": "2026-03-11",
+    "startMin": 1320,
+    "endMin": 1410,
+    "status": "approved",
+    "by": "Ginza Empire"
+  }
+]
