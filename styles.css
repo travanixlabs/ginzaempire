@@ -1017,6 +1017,11 @@ tr:hover .cal-bulk-actions,.cal-bulk-actions:focus-within{opacity:1;pointer-even
 .pdb-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.04);font-size:13px;color:rgba(255,255,255,0.8);letter-spacing:0.5px}
 .pdb-table tr:hover td{background:rgba(255,255,255,0.02)}
 .pdb-user{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;color:#fff}
+.pdb-bookings{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-align:center;color:var(--accent);white-space:nowrap}
+.pdb-bk-approved,.pdb-bk-pending,.pdb-bk-rejected{font-size:10px;padding:1px 5px;border-radius:3px;margin-left:2px;letter-spacing:0.5px}
+.pdb-bk-pending{color:rgba(255,200,50,0.9);background:rgba(255,200,50,0.1)}
+.pdb-bk-approved{color:rgba(80,220,120,0.9);background:rgba(80,220,120,0.1)}
+.pdb-bk-rejected{color:rgba(255,70,70,0.8);background:rgba(255,70,70,0.08)}
 .pdb-role-select{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;padding:6px 12px;cursor:pointer;transition:all .3s}
 .pdb-role-select:hover{border-color:var(--accent)}
 .pdb-role-select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 8px rgba(180,74,255,0.2)}

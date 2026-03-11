@@ -330,6 +330,8 @@ async function pollTick(){
     renderActivePage();
   }
   updateLastUpdatedDisplay();
+  /* Auto-reject expired pending bookings on each poll tick */
+  if(typeof autoRejectExpiredBookings==='function')autoRejectExpiredBookings();
 }
 
 function startAdaptivePolling(){
@@ -453,6 +455,9 @@ if(renderedFromCache&&window.location.pathname!=='/')Router.resolve();
 
 /* Apply saved language preference */
 if(typeof applyLang==='function'){try{applyLang()}catch(e){}}
+
+/* Auto-reject expired pending bookings */
+if(typeof autoRejectExpiredBookings==='function')autoRejectExpiredBookings();
 
 }catch(e){
 console.error('Init error:',e);

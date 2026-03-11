@@ -990,10 +990,54 @@ showPage('homePage');
 
 /* ── Profile Database ── */
 let _pdbSearch='',_pdbRoleFilter='';
-function renderProfileDb(){
+let _pdbBookingCounts=null; /* cached {user -> {total,approved,rejected}} */
+
+async function _loadBookingCounts(){
+  if(_pdbBookingCounts)return _pdbBookingCounts;
+  const counts={};
+  try{
+    const r=await fetch(`${DATA_API}/${BKLP}`,{headers:proxyHeaders()});
+    if(!r.ok)return counts;
+    const files=await r.json();
+    if(!Array.isArray(files))return counts;
+    /* Fetch all log files (file name = request date, not booking date) */
+    const allEntries=[];
+    const batches=[];
+    for(let i=0;i<files.length;i+=10)batches.push(files.slice(i,i+10));
+    for(const batch of batches){
+      const results=await Promise.all(batch.map(async f=>{
+        try{const fr=await fetch(`${DATA_API}/${BKLP}/${f.name}`,{headers:proxyHeaders()});if(!fr.ok)return[];const d=await fr.json();const parsed=dec(d.content);return Array.isArray(parsed)?parsed:[];}catch(e){return[]}
+      }));
+      results.forEach(entries=>{entries.forEach(e=>{if(e.bookingId&&e.user)allEntries.push(e)})});
+    }
+    /* Deduplicate by bookingId — keep last status per booking */
+    const bookings={};/* bookingId -> {user, status} */
+    allEntries.forEach(e=>{
+      const id=e.bookingId;
+      if(!bookings[id])bookings[id]={user:e.user,status:'pending'};
+      if(e.type==='booking_approved')bookings[id].status='approved';
+      else if(e.type==='booking_rejected')bookings[id].status='rejected';
+    });
+    /* Tally per user */
+    Object.values(bookings).forEach(b=>{
+      if(!counts[b.user])counts[b.user]={total:0,approved:0,rejected:0,pending:0};
+      counts[b.user].total++;
+      if(b.status==='approved')counts[b.user].approved++;
+      else if(b.status==='rejected')counts[b.user].rejected++;
+      else counts[b.user].pending++;
+    });
+  }catch(e){console.warn('Failed to load booking counts:',e.message)}
+  _pdbBookingCounts=counts;
+  return counts;
+}
+
+async function renderProfileDb(){
 if(!isAdmin())return;
 const container=document.getElementById('profileDbContent');
 if(!container)return;
+/* Show loading on first load while fetching booking logs */
+if(!_pdbBookingCounts){container.innerHTML='<div class="an-loading"><div class="an-loading-spinner"></div><div class="an-loading-text">'+t('an.loading')+'</div></div>'}
+const bkCounts=await _loadBookingCounts();
 /* Filters bar */
 let html='<div class="pdb-filters"><input class="pdb-search" id="pdbSearch" type="text" placeholder="'+t('pdb.searchPlaceholder')+'" value="'+(_pdbSearch||'').replace(/"/g,'&quot;')+'">';
 html+='<select class="pdb-role-filter" id="pdbRoleFilter"><option value=""'+ (_pdbRoleFilter===''?' selected':'')+'>'+t('pdb.allRoles')+'</option><option value="admin"'+(_pdbRoleFilter==='admin'?' selected':'')+'>Admin</option><option value="member"'+(_pdbRoleFilter==='member'?' selected':'')+'>Member</option></select></div>';
@@ -1005,12 +1049,13 @@ if(_pdbRoleFilter&&c.role!==_pdbRoleFilter)return false;
 if(q){const u=(c.user||'').toLowerCase(),e=(c.email||'').toLowerCase(),m=(c.mobile||'').toLowerCase();if(!u.includes(q)&&!e.includes(q)&&!m.includes(q))return false}
 return true});
 /* Table */
-html+='<table class="pdb-table"><thead><tr><th>'+t('pdb.username')+'</th><th>'+t('field.email')+'</th><th>'+t('field.mobile')+'</th><th>'+t('pdb.role')+'</th><th>'+t('pdb.status')+'</th><th></th></tr></thead><tbody>';
-if(!filtered.length){html+='<tr><td colspan="6" style="text-align:center;color:var(--text-dim);padding:24px">'+t('pdb.noResults')+'</td></tr>'}
+html+='<table class="pdb-table"><thead><tr><th>'+t('pdb.username')+'</th><th>'+t('field.email')+'</th><th>'+t('field.mobile')+'</th><th>'+t('pdb.bookings')+'</th><th>'+t('pdb.role')+'</th><th>'+t('pdb.status')+'</th><th></th></tr></thead><tbody>';
+if(!filtered.length){html+='<tr><td colspan="7" style="text-align:center;color:var(--text-dim);padding:24px">'+t('pdb.noResults')+'</td></tr>'}
 filtered.forEach(({c,i})=>{
 const isSelf=c.user===loggedInUser;const st=c.status||'approved';
 const isApproved=st==='approved';
-html+='<tr><td class="pdb-user">'+((c.user||'').toUpperCase())+'</td><td>'+(c.email||'—')+'</td><td>'+(c.mobile||'—')+'</td><td><select class="pdb-role-select" data-cred-idx="'+i+'"><option value="admin"'+(c.role==='admin'?' selected':'')+'>Admin</option><option value="member"'+(c.role==='member'?' selected':'')+'>Member</option></select></td><td><label class="pdb-status-check'+(isApproved?' pdb-status-approved':'')+'"><input type="checkbox" class="pdb-status-cb" data-cred-idx="'+i+'"'+(isApproved?' checked disabled':'')+'/><span class="pdb-status-label">'+(isApproved?t('pdb.statusApproved'):t('pdb.statusPending'))+'</span></label></td><td>'+(isSelf?'':'<button class="pdb-delete-btn" data-cred-idx="'+i+'" title="'+t('pdb.deleteUser')+'">&#x2715;</button>')+'</td></tr>'});
+const bk=bkCounts[c.user]||{total:0,approved:0,rejected:0,pending:0};
+html+='<tr><td class="pdb-user">'+((c.user||'').toUpperCase())+'</td><td>'+(c.email||'—')+'</td><td>'+(c.mobile||'—')+'</td><td class="pdb-bookings">'+bk.total+' <span class="pdb-bk-approved" title="'+t('pdb.bkApproved')+'">'+bk.approved+'</span> <span class="pdb-bk-pending" title="'+t('pdb.bkPending')+'">'+bk.pending+'</span> <span class="pdb-bk-rejected" title="'+t('pdb.bkRejected')+'">'+bk.rejected+'</span></td><td><select class="pdb-role-select" data-cred-idx="'+i+'"><option value="admin"'+(c.role==='admin'?' selected':'')+'>Admin</option><option value="member"'+(c.role==='member'?' selected':'')+'>Member</option></select></td><td><label class="pdb-status-check'+(isApproved?' pdb-status-approved':'')+'"><input type="checkbox" class="pdb-status-cb" data-cred-idx="'+i+'"'+(isApproved?' checked disabled':'')+'/><span class="pdb-status-label">'+(isApproved?t('pdb.statusApproved'):t('pdb.statusPending'))+'</span></label></td><td>'+(isSelf?'':'<button class="pdb-delete-btn" data-cred-idx="'+i+'" title="'+t('pdb.deleteUser')+'">&#x2715;</button>')+'</td></tr>'});
 html+='</tbody></table>';
 container.innerHTML=html;
 /* Bind search */

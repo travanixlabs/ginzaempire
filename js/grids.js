@@ -399,6 +399,7 @@ function slotInRange(absMin,startStr,endStr){
 function renderBookingsGrid(){
   const el=document.getElementById('bookingsGrid');
   if(!bookingsDateFilter){el.innerHTML='';return}
+  if(isAdmin())autoRejectExpiredBookings();
   let active=girls.filter(g=>{const e=getCalEntry(g.name,bookingsDateFilter);return e&&e.start&&e.end&&!_isOnVacation(g.name,bookingsDateFilter)});
   active=applySharedFilters(active);
   applySortOrder(active);
@@ -522,6 +523,43 @@ async function rejectBooking(){
   const removed=calData._bookings.splice(idx,1)[0];
   if(await saveCalData()){saveBookingLog({type:'booking_rejected',bookingId:removed.id,user:removed.user,girlName:removed.girlName,date:removed.date,startMin:removed.startMin,endMin:removed.endMin,status:'rejected',by:loggedInUser});document.getElementById('adminBkPopup').classList.remove('open');showToast('Booking rejected');renderBookingsGrid()}
   else{calData._bookings.splice(idx,0,removed);showToast('Failed to save','error')}
+}
+
+let _autoRejectRunning=false;
+async function autoRejectExpiredBookings(){
+  if(_autoRejectRunning||!Array.isArray(calData._bookings))return;
+  const now=getAEDTDate();
+  const nowMin=now.getHours()*60+now.getMinutes();
+  const todayStr=fmtDate(now);
+  const expired=calData._bookings.filter(b=>{
+    if(b.status!=='pending')return false;
+    const bkDate=new Date(b.date+'T00:00:00');
+    /* endMin > 1440 means booking extends past midnight into next day */
+    const endDay=new Date(bkDate);endDay.setDate(endDay.getDate()+Math.floor(b.endMin/1440));
+    const endDayStr=fmtDate(endDay);
+    const endMinOfDay=b.endMin%1440;
+    /* Compare: if end date is before today, expired. If same day, check time. */
+    if(endDayStr<todayStr)return true;
+    if(endDayStr===todayStr&&endMinOfDay<=nowMin)return true;
+    return false;
+  });
+  if(!expired.length)return;
+  _autoRejectRunning=true;
+  try{
+    expired.forEach(b=>{
+      const idx=calData._bookings.findIndex(x=>x.id===b.id);
+      if(idx!==-1)calData._bookings.splice(idx,1);
+    });
+    if(await saveCalData()){
+      expired.forEach(b=>{
+        saveBookingLog({type:'booking_auto_rejected',bookingId:b.id,user:b.user,girlName:b.girlName,date:b.date,startMin:b.startMin,endMin:b.endMin,status:'rejected',by:'system'});
+      });
+      console.log('[AutoReject] Rejected',expired.length,'expired pending booking(s)');
+    }else{
+      /* Restore on failure */
+      expired.forEach(b=>calData._bookings.push(b));
+    }
+  }finally{_autoRejectRunning=false}
 }
 
 async function editBooking(){
