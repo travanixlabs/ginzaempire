@@ -457,5 +457,11 @@
     "uuid": "v_mmlhl8yu_trfw2ana",
     "timestamp": "2026-03-11T06:14:00.689Z",
     "page": "list"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlhl8yu_trfw2ana",
+    "timestamp": "2026-03-11T06:14:12.446Z",
+    "page": "value"
   }
 ]
