@@ -885,5 +885,11 @@
     "uuid": "v_mmlqrxyr_17pss3h5",
     "timestamp": "2026-03-11T10:13:51.920Z",
     "page": "roster"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlqrxyr_17pss3h5",
+    "timestamp": "2026-03-11T10:14:03.134Z",
+    "page": "bookings"
   }
 ]
