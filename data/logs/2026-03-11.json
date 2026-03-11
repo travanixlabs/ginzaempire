@@ -873,5 +873,11 @@
     "uuid": "v_mmlqrxyr_17pss3h5",
     "timestamp": "2026-03-11T10:04:28.887Z",
     "page": "bookings"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlqrxyr_17pss3h5",
+    "timestamp": "2026-03-11T10:04:34.240Z",
+    "page": "calendar"
   }
 ]
