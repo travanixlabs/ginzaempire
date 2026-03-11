@@ -1,7 +1,7 @@
 /* === CORE UTILITIES & API === */
 
 const PROXY = 'https://github-proxy.sydneyginza-api-2.workers.dev';
-const REPO = 'sydneyginza/ginzaempire';
+const REPO = 'sydneyginza/sydneyginza.github.io';
 const DATA_REPO = REPO;
 const SITE_REPO = REPO;
 const DATA_API = `${PROXY}/repos/${DATA_REPO}/contents`;

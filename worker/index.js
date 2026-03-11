@@ -6,7 +6,7 @@
  */
 
 const ALLOWED_ORIGIN = 'https://sydneyginza.github.io';
-const REPO = 'sydneyginza/ginzaempire';
+const REPO = 'sydneyginza/sydneyginza.github.io';
 const DATA_REPO = REPO;
 const GH_API = 'https://api.github.com';
 
