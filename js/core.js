@@ -967,7 +967,7 @@ function loadAdminModule(){
   if(window._adminLoaded)return Promise.resolve();
   if(_adminModulePromise)return _adminModulePromise;
   _adminModulePromise=new Promise(function(resolve,reject){
-    var s=document.createElement('script');s.src='/js/admin.min.js';
+    var s=document.createElement('script');s.src='/js/admin.js';
     s.onload=resolve;
     s.onerror=function(){_adminModulePromise=null;reject(new Error('Failed to load admin module'))};
     document.head.appendChild(s);
