@@ -377,7 +377,6 @@ history.replaceState({path:'/'},'Ginza Empire','/');
 
 async function initApp(){
 try{
-await loadConfig();
 if(typeof initOfflineDetection==='function')initOfflineDetection();
 
 /* Phase 1: Instant render from cache */

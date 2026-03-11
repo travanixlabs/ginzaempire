@@ -1,7 +1,7 @@
 /* === ANALYTICS — GITHUB VISITOR LOGS === */
 
 /*
- * GitHub Visitor Logs: append-only daily JSON files in data/logs/ on the DATA_REPO.
+ * GitHub Visitor Logs: append-only daily JSON files in data/logs/.
  * Each visitor session logs: initial visit info + every page view + every profile view.
  * Captures: anonymous UUID, user-agent, language, timezone, page path, timestamp.
  */

@@ -1,16 +1,13 @@
-/* === CORE UTILITIES & API (Proxy Version) === */
+/* === CORE UTILITIES & API === */
 
-// ✅ No token in frontend! All requests go through your Cloudflare Worker.
-// Replace this with your actual worker URL after deploying.
 const PROXY = 'https://github-proxy.sydneyginza-api-2.workers.dev';
-
-// Repo paths (no tokens needed)
-const DATA_REPO = 'sydneyginza/files';
-const SITE_REPO = 'sydneyginza/sydneyginza.github.io';
+const REPO = 'sydneyginza/ginzaempire';
+const DATA_REPO = REPO;
+const SITE_REPO = REPO;
 const DATA_API = `${PROXY}/repos/${DATA_REPO}/contents`;
 const SITE_API = `${PROXY}/repos/${SITE_REPO}/contents`;
 
-const DP = 'data/girls.json', AP = 'data/auth.json', KP = 'data/calendar.json', CP = 'data/config.json', RHP = 'data/roster_history.json', VP = 'data/vacation.json', ALP = 'data/admin_log.json', BKLP = 'data/logs_bookings';
+const DP = 'data/girls.json', AP = 'data/auth.json', KP = 'data/calendar.json', RHP = 'data/roster_history.json', VP = 'data/vacation.json', ALP = 'data/admin_log.json', BKLP = 'data/logs_bookings';
 var loggedIn = false, dataSha = null, calSha = null, calData = {}, loggedInUser = null, loggedInRole = null, loggedInEmail = null, loggedInMobile = null, authSha = null, MAX_PHOTOS = 10, profileReturnPage = 'homePage';
 function isAdmin(){ return loggedIn && (loggedInRole === 'admin' || loggedInRole === 'owner') }
 var rosterHistory = {}, rosterHistorySha = null;
@@ -77,11 +74,10 @@ document.addEventListener('visibilitychange', () => {
   }
 });
 
-// ✅ No auth headers needed — the proxy injects the token server-side
 function proxyHeaders() {
   return {
     'Content-Type': 'application/json',
-    'X-Requested-With': 'XMLHttpRequest', // helps the proxy verify it's a real request
+    'X-Requested-With': 'XMLHttpRequest',
   };
 }
 
@@ -614,13 +610,6 @@ function queueCalSave(td, delay) {
 function flushCalSave() {
   clearTimeout(_calSaveTimer);
   if (_calSavingCells.size > 0 || _calSaveQueued) { _execCalSave(); }
-}
-
-// ✅ loadConfig is no longer needed since the proxy handles the token.
-// If you still need config for other settings, simplify it:
-async function loadConfig() {
-  // No token management needed — just set repo paths
-  return true;
 }
 
 /* === Error Boundaries === */

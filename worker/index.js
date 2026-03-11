@@ -2,11 +2,12 @@
  * Cloudflare Worker — GitHub API Proxy
  *
  * Secrets required (set via Cloudflare dashboard or `wrangler secret put`):
- *   GITHUB_TOKEN        — GitHub personal access token (repo scope)
+ *   GITHUB_TOKEN — GitHub personal access token (contents read/write scope)
  */
 
 const ALLOWED_ORIGIN = 'https://sydneyginza.github.io';
-const DATA_REPO = 'sydneyginza/files';
+const REPO = 'sydneyginza/ginzaempire';
+const DATA_REPO = REPO;
 const GH_API = 'https://api.github.com';
 
 /* ── Helpers ── */
@@ -113,7 +114,7 @@ async function generateSitemap(env) {
 
 async function commitSitemap(env) {
   const xml = await generateSitemap(env);
-  const SITE_REPO = 'sydneyginza/sydneyginza.github.io';
+  const SITE_REPO = REPO;
   const path = 'sitemap.xml';
   // Fetch current sha
   let sha = null;
