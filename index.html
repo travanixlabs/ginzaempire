@@ -325,6 +325,11 @@
 <div id="profileDbContent"></div>
 </section></div>
 
+<div class="page" id="myProfilePage"><section class="section">
+<div class="section-header"><div class="section-line"></div><div><div class="section-tag" data-i18n="ui.myProfile"></div><div class="section-title" id="mpPageTitle">My Profile</div></div></div>
+<div id="myProfilePageContent"></div>
+</section></div>
+
 <div class="page" id="profilePage">
 <div class="profile-page" id="profileContent"><div style="margin-bottom:20px"><div class="skeleton-shimmer" style="width:120px;height:36px;border-radius:4px"></div></div><div class="profile-layout"><div class="profile-image-area"><div class="gallery-main skeleton-shimmer" style="border-radius:8px;min-height:400px;aspect-ratio:3/4"></div><div class="gallery-thumbs" style="margin-top:8px;display:flex;gap:6px"><div class="skeleton-shimmer" style="width:60px;height:60px;border-radius:4px;flex-shrink:0"></div><div class="skeleton-shimmer" style="width:60px;height:60px;border-radius:4px;flex-shrink:0"></div><div class="skeleton-shimmer" style="width:60px;height:60px;border-radius:4px;flex-shrink:0"></div><div class="skeleton-shimmer" style="width:60px;height:60px;border-radius:4px;flex-shrink:0"></div></div></div><div class="profile-details"><div class="skel-line skeleton-shimmer" style="width:55%;height:30px;margin-bottom:8px;border-radius:4px"></div><div style="display:flex;gap:8px;margin-bottom:20px"><div class="skeleton-shimmer" style="width:80px;height:16px;border-radius:4px"></div><div class="skeleton-shimmer" style="width:140px;height:16px;border-radius:4px"></div></div><div style="display:flex;gap:10px;margin-bottom:24px"><div class="skeleton-shimmer" style="width:100px;height:34px;border-radius:4px"></div><div class="skeleton-shimmer" style="width:80px;height:34px;border-radius:4px"></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px"><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div></div><div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:20px"><div class="skel-line skeleton-shimmer" style="width:30%;height:18px;margin-bottom:14px;border-radius:4px"></div><div class="skel-line skeleton-shimmer" style="width:100%;height:12px;margin-bottom:8px;border-radius:4px"></div><div class="skel-line skeleton-shimmer" style="width:90%;height:12px;margin-bottom:8px;border-radius:4px"></div><div class="skel-line skeleton-shimmer" style="width:75%;height:12px;border-radius:4px"></div></div></div></div></div>
 </div>
@@ -367,19 +372,6 @@
 <div class="form-title" id="deleteTitle" style="margin-bottom:12px" data-i18n="form.confirmDelete"></div>
 <p style="color:var(--text-dim);margin-bottom:28px;font-size:15px" id="deleteMsg" data-i18n="ui.confirm"></p>
 <div class="form-actions" style="justify-content:center"><button class="btn btn-secondary" id="deleteCancel" data-i18n="form.cancel"></button><button class="btn btn-danger" id="deleteConfirm" data-i18n="form.delete"></button></div>
-</div></div>
-
-<div class="modal-overlay" id="myProfileOverlay" role="dialog" aria-modal="true" aria-labelledby="myProfileTitle"><div class="form-modal" style="max-width:420px">
-<button class="modal-close" id="myProfileClose" aria-label="Close">&times;</button>
-<div class="form-title" id="myProfileTitle" data-i18n="ui.myProfile"></div>
-<div class="mp-user-display" id="mpUserDisplay"></div>
-<div class="form-row full" style="margin-top:20px"><div class="form-group"><label class="form-label" for="mpEmail" data-i18n="field.email"></label><input class="form-input" id="mpEmail" type="email" placeholder="email@example.com"></div></div>
-<div class="form-row full"><div class="form-group"><label class="form-label" for="mpMobile" data-i18n="field.mobile"></label><input class="form-input" id="mpMobile" type="tel" placeholder="04XX XXX XXX"></div></div>
-<div class="form-row full"><div class="form-group"><label class="form-label" for="mpNewPass" data-i18n="ui.newPassword"></label><input class="form-input" id="mpNewPass" type="password" data-i18n-ph="ui.leaveBlank"></div></div>
-<div class="form-row full"><div class="form-group"><label class="form-label" for="mpConfirmPass" data-i18n="ui.confirmPassword"></label><input class="form-input" id="mpConfirmPass" type="password"></div></div>
-<div id="mpBookingSection" style="display:none;margin-top:16px"><div class="mp-booking-hdr">Your Current Booking</div><div class="mp-booking-card" id="mpBookingCard"></div></div>
-<div class="lf-error" id="mpError" style="margin-bottom:8px"></div>
-<div class="form-actions"><button class="btn btn-secondary" id="myProfileCancel" data-i18n="form.cancel"></button><button class="btn btn-primary" id="myProfileSave" data-i18n="form.save"></button></div>
 </div></div>
 
 <div class="modal-overlay" id="authOverlay" role="dialog" aria-modal="true" aria-label="Authentication"><div class="form-modal" style="max-width:400px">

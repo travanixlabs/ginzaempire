@@ -277,7 +277,7 @@ if(document.getElementById('bookingsPage').classList.contains('active'))renderBo
 if(document.getElementById('vacationPage').classList.contains('active'))renderVacationTable();
 if(document.getElementById('profilePage').classList.contains('active')){const fi=getNamedGirlIndices();if(fi.length){if(!fi.includes(currentProfileIdx))showProfile(fi[0]);else{renderProfileNav(currentProfileIdx)}}else{document.getElementById('profileContent').innerHTML='<button class="back-btn" id="backBtn"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>Back</button><div class="empty-msg">No profiles match the current filters</div>';document.getElementById('backBtn').onclick=()=>{if(window.history.length>1){window.history.back()}else{showPage(profileReturnPage)}}}}
 if(focusPaneId){const restored=document.getElementById(focusPaneId);if(restored){const inp=restored.querySelector('[data-role="name-search"]');if(inp){inp.focus();inp.setSelectionRange(cursorPos,cursorPos)}}};renderActiveFilterChips()}
-const allPages=['homePage','rosterPage','listPage','favoritesPage','valuePage','employmentPage','calendarPage','analyticsPage','profileDbPage','bookingsPage','vacationPage','profilePage'].map(id=>document.getElementById(id));
+const allPages=['homePage','rosterPage','listPage','favoritesPage','valuePage','employmentPage','calendarPage','analyticsPage','profileDbPage','bookingsPage','vacationPage','myProfilePage','profilePage'].map(id=>document.getElementById(id));
 
 function showPage(id){
 resetOgMeta();if(document.getElementById('calendarPage').classList.contains('active')&&id!=='calendarPage'){flushCalSave();let s=false;for(const n in calPending)for(const dt in calPending[n])if(calPending[n][dt]&&calData[n]&&calData[n][dt]){delete calData[n][dt];s=true}if(s){saveCalData();renderRoster();renderGrid()}calPending={}}
@@ -285,7 +285,7 @@ const prev=document.querySelector('.page.active');const next=document.getElement
 closeFilterPanel();
 _kbFocusedCardIdx=-1;document.querySelectorAll('.girl-card.kb-focused').forEach(c=>c.classList.remove('kb-focused'));
 /* URL routing & dynamic title */
-const titleMap={homePage:'Ginza Empire',rosterPage:'Ginza Empire – Roster',listPage:'Ginza Empire – Girls',favoritesPage:'Ginza Empire – Favorites',valuePage:'Ginza Empire – Rates',employmentPage:'Ginza Empire – Employment',calendarPage:'Ginza Empire – Calendar',analyticsPage:'Ginza Empire – Analytics',profileDbPage:'Ginza Empire – Profile Database',bookingsPage:'Ginza Empire – Bookings',vacationPage:'Ginza Empire – Vacation'};
+const titleMap={homePage:'Ginza Empire',rosterPage:'Ginza Empire – Roster',listPage:'Ginza Empire – Girls',favoritesPage:'Ginza Empire – Favorites',valuePage:'Ginza Empire – Rates',employmentPage:'Ginza Empire – Employment',calendarPage:'Ginza Empire – Calendar',analyticsPage:'Ginza Empire – Analytics',profileDbPage:'Ginza Empire – Profile Database',bookingsPage:'Ginza Empire – Bookings',vacationPage:'Ginza Empire – Vacation',myProfilePage:'Ginza Empire – My Profile'};
 const pageTitle=titleMap[id]||'Ginza Empire';
 document.title=pageTitle;
 announce(pageTitle.replace('Ginza Empire – ','').replace('Ginza Empire','Home'));
@@ -304,6 +304,7 @@ if(id==='analyticsPage'){document.getElementById('navAnalytics').classList.add('
 if(id==='profileDbPage'){document.getElementById('navProfileDb').classList.add('active');if(typeof renderProfileDb==='function')renderProfileDb()}
 if(id==='bookingsPage'){document.getElementById('navBookings').classList.add('active');renderBookingsFilters();renderBookingsGrid()}
 if(id==='vacationPage'){document.getElementById('navVacation').classList.add('active');renderVacationTable()}
+if(id==='myProfilePage'){renderMyProfilePage()}
 renderFilterPane('sharedFilterPane');
 updateFilterToggle();
 pushFiltersToURL();
@@ -854,58 +855,91 @@ t.onclick=()=>{_clearGalAuto();galGoTo(i,g.photos)};
 if(isAdmin()){const rm=document.createElement('button');rm.className='gallery-thumb-remove';rm.innerHTML='&#x2715;';rm.onclick=async e=>{e.stopPropagation();if(src.includes('githubusercontent.com'))await deleteFromGithub(src);g.photos.splice(i,1);await saveData();showProfile(idx);renderGrid();renderRoster();renderHome();showToast('Photo removed')};t.appendChild(rm)}
 c.appendChild(t)})}
 
-/* My Profile Modal */
-function openMyProfile(){
-const overlay=document.getElementById('myProfileOverlay');
-const entry=CRED.find(c=>c.user===loggedInUser);if(!entry)return;
-const roleBadge=loggedInRole==='owner'?'<span class="mp-role-badge owner">OWNER</span>':loggedInRole==='admin'?'<span class="mp-role-badge admin">ADMIN</span>':'<span class="mp-role-badge member">MEMBER</span>';
-document.getElementById('mpUserDisplay').innerHTML=`<div class="mp-username">${loggedInUser.toUpperCase()}</div>${roleBadge}`;
-document.getElementById('mpEmail').value=entry.email||'';
-document.getElementById('mpMobile').value=entry.mobile||'';
-document.getElementById('mpNewPass').value='';
-document.getElementById('mpConfirmPass').value='';
-document.getElementById('mpError').textContent='';
-const bkSec=document.getElementById('mpBookingSection');
-const _mpNow=new Date(),_mpH=_mpNow.getHours(),_mpM=_mpNow.getMinutes(),_mpNowMin=_mpH<10?(_mpH+24)*60+_mpM:_mpH*60+_mpM,_mpToday=_mpNow.toISOString().slice(0,10);
-const myBk=(Array.isArray(calData._bookings)&&calData._bookings.filter(b=>b.user===loggedInUser&&(b.status==='pending'||b.status==='approved')&&(b.date>_mpToday||(b.date===_mpToday&&b.endMin>_mpNowMin))).sort((a,b)=>a.date!==b.date?a.date.localeCompare(b.date):a.startMin-b.startMin)[0])||null;
-if(myBk&&bkSec){
-  const f=dispDate(myBk.date);
-  const dur=myBk.endMin-myBk.startMin;
-  const durStr=dur>=60?(dur/60)+'hr'+(dur>60?'s':''):dur+' min';
-  document.getElementById('mpBookingCard').innerHTML=
-    '<div class="mp-bk-row"><span class="mp-bk-label">Girl</span><a class="mp-bk-girl-link" href="#">'+myBk.girlName+'</a></div>'+
-    '<div class="mp-bk-row"><span class="mp-bk-label">Date</span><span>'+f.day+' '+f.date+'</span></div>'+
-    '<div class="mp-bk-row"><span class="mp-bk-label">Time</span><span>'+fmtSlotTime(myBk.startMin)+' – '+fmtSlotTime(myBk.endMin)+'</span></div>'+
-    '<div class="mp-bk-row"><span class="mp-bk-label">Duration</span><span>'+durStr+'</span></div>'+
-    '<div class="mp-bk-row"><span class="mp-bk-label">Status</span><span class="mp-bk-status">'+(myBk.status==='approved'?'Approved':'Pending Review')+'</span></div>';
-  const _gl=document.getElementById('mpBookingCard').querySelector('.mp-bk-girl-link');
-  if(_gl){_gl.onclick=e=>{e.preventDefault();const _gi=girls.findIndex(f=>f.name&&f.name.trim().toLowerCase()===myBk.girlName.trim().toLowerCase());if(_gi!==-1){document.getElementById('myProfileOverlay').classList.remove('open');showProfile(_gi)}}}
-  bkSec.style.display='';
-}else if(bkSec){bkSec.style.display='none'}
-overlay.classList.add('open')}
+/* My Profile Page */
+var _mpViewUser=null;
 
-document.getElementById('myProfileClose').onclick=()=>document.getElementById('myProfileOverlay').classList.remove('open');
-document.getElementById('myProfileCancel').onclick=()=>document.getElementById('myProfileOverlay').classList.remove('open');
-document.getElementById('myProfileOverlay').onclick=e=>{if(e.target.id==='myProfileOverlay')e.target.classList.remove('open')};
+function openMyProfile(targetUser){
+  _mpViewUser=targetUser||loggedInUser;
+  if(_mpViewUser!==loggedInUser&&!isAdmin())return;
+  showPage('myProfilePage');
+  const urlPath=_mpViewUser===loggedInUser?'/my-profile':'/profile-database/'+encodeURIComponent(_mpViewUser);
+  Router.push(urlPath,'Ginza Empire – My Profile');
+}
 
-document.getElementById('myProfileSave').onclick=async()=>{
-const entry=CRED.find(c=>c.user===loggedInUser);if(!entry)return;
-const newPass=document.getElementById('mpNewPass').value;
-const confirmPass=document.getElementById('mpConfirmPass').value;
-const errEl=document.getElementById('mpError');
-const emailVal=document.getElementById('mpEmail').value.trim();
-if(!emailVal){errEl.textContent=t('ui.emailRequired');return}
-if(newPass&&newPass!==confirmPass){errEl.textContent=t('ui.passwordMismatch');return}
-errEl.textContent='';
-const saveBtn=document.getElementById('myProfileSave');saveBtn.textContent='SAVING...';saveBtn.style.pointerEvents='none';
-try{
-entry.email=document.getElementById('mpEmail').value.trim()||undefined;
-entry.mobile=document.getElementById('mpMobile').value.trim()||undefined;
-if(newPass)entry.pass=newPass;
-loggedInEmail=entry.email||null;
-loggedInMobile=entry.mobile||null;
-if(await saveAuth()){document.getElementById('myProfileOverlay').classList.remove('open');showToast(t('ui.profileSaved'))}
-}catch(e){errEl.textContent='Error: '+e.message}finally{saveBtn.textContent=t('form.save');saveBtn.style.pointerEvents='auto'}};
+function renderMyProfilePage(){
+  const container=document.getElementById('myProfilePageContent');if(!container)return;
+  const user=_mpViewUser||loggedInUser;
+  const entry=CRED.find(c=>c.user===user);
+  if(!entry){container.innerHTML='<div class="empty-msg">User not found.</div>';return}
+  const isOwnProfile=user===loggedInUser;
+  const isAdminView=isAdmin()&&!isOwnProfile;
+  const role=entry.role||'member';
+  const roleBadge=role==='owner'?'<span class="mp-role-badge owner">OWNER</span>':role==='admin'?'<span class="mp-role-badge admin">ADMIN</span>':'<span class="mp-role-badge member">MEMBER</span>';
+  /* Title */
+  document.getElementById('mpPageTitle').textContent=isOwnProfile?t('ui.myProfile'):user.toUpperCase()+' – Profile';
+
+  let html='<div class="mp-page-layout">';
+  /* User display */
+  html+='<div class="mp-user-display"><div class="mp-username">'+user.toUpperCase()+'</div>'+roleBadge+'</div>';
+  /* Profile fields */
+  html+='<div class="mp-page-form">';
+  html+='<div class="form-row full"><div class="form-group"><label class="form-label">'+t('field.email')+'</label><input class="form-input" id="mpEmail" type="email" placeholder="email@example.com" value="'+(entry.email||'').replace(/"/g,'&quot;')+'"'+(isAdminView?' disabled':'')+'></div></div>';
+  html+='<div class="form-row full"><div class="form-group"><label class="form-label">'+t('field.mobile')+'</label><input class="form-input" id="mpMobile" type="tel" placeholder="04XX XXX XXX" value="'+(entry.mobile||'').replace(/"/g,'&quot;')+'"'+(isAdminView?' disabled':'')+'></div></div>';
+  if(isOwnProfile){
+    html+='<div class="form-row full"><div class="form-group"><label class="form-label">'+t('ui.newPassword')+'</label><input class="form-input" id="mpNewPass" type="password" placeholder="'+t('ui.leaveBlank')+'"></div></div>';
+    html+='<div class="form-row full"><div class="form-group"><label class="form-label">'+t('ui.confirmPassword')+'</label><input class="form-input" id="mpConfirmPass" type="password"></div></div>';
+  }
+  html+='</div>';
+
+  /* Current booking */
+  const _mpNow=new Date(),_mpH=_mpNow.getHours(),_mpM=_mpNow.getMinutes(),_mpNowMin=_mpH<10?(_mpH+24)*60+_mpM:_mpH*60+_mpM,_mpToday=_mpNow.toISOString().slice(0,10);
+  const myBk=(Array.isArray(calData._bookings)&&calData._bookings.filter(b=>b.user===user&&(b.status==='pending'||b.status==='approved')&&(b.date>_mpToday||(b.date===_mpToday&&b.endMin>_mpNowMin))).sort((a,b)=>a.date!==b.date?a.date.localeCompare(b.date):a.startMin-b.startMin)[0])||null;
+  if(myBk){
+    const f=dispDate(myBk.date);
+    const dur=myBk.endMin-myBk.startMin;
+    const durStr=dur>=60?(dur/60)+'hr'+(dur>60?'s':''):dur+' min';
+    html+='<div style="margin-top:20px"><div class="mp-booking-hdr">Your Current Booking</div>';
+    html+='<div class="mp-booking-card">';
+    html+='<div class="mp-bk-row"><span class="mp-bk-label">Girl</span><a class="mp-bk-girl-link" data-girl="'+myBk.girlName.replace(/"/g,'&quot;')+'" href="#">'+myBk.girlName+'</a></div>';
+    html+='<div class="mp-bk-row"><span class="mp-bk-label">Date</span><span>'+f.day+' '+f.date+'</span></div>';
+    html+='<div class="mp-bk-row"><span class="mp-bk-label">Time</span><span>'+fmtSlotTime(myBk.startMin)+' – '+fmtSlotTime(myBk.endMin)+'</span></div>';
+    html+='<div class="mp-bk-row"><span class="mp-bk-label">Duration</span><span>'+durStr+'</span></div>';
+    html+='<div class="mp-bk-row"><span class="mp-bk-label">Status</span><span class="mp-bk-status mp-bk-status-'+(myBk.status==='approved'?'approved':'pending')+'">'+(myBk.status==='approved'?'Approved':'Pending Review')+'</span></div>';
+    html+='</div></div>';
+  }
+
+  /* Error + actions */
+  html+='<div class="lf-error" id="mpError" style="margin:12px 0"></div>';
+  if(!isAdminView){
+    html+='<div class="form-actions" style="margin-top:16px"><button class="btn btn-primary" id="myProfileSave">'+t('form.save')+'</button></div>';
+  }
+  html+='</div>';
+  container.innerHTML=html;
+
+  /* Bind girl link */
+  const gl=container.querySelector('.mp-bk-girl-link');
+  if(gl){gl.onclick=e=>{e.preventDefault();const _gi=girls.findIndex(f=>f.name&&f.name.trim().toLowerCase()===gl.dataset.girl.trim().toLowerCase());if(_gi!==-1)showProfile(_gi)}}
+
+  /* Bind save */
+  const saveBtn=document.getElementById('myProfileSave');
+  if(saveBtn){saveBtn.onclick=async()=>{
+    const newPass=document.getElementById('mpNewPass')?document.getElementById('mpNewPass').value:'';
+    const confirmPass=document.getElementById('mpConfirmPass')?document.getElementById('mpConfirmPass').value:'';
+    const errEl=document.getElementById('mpError');
+    const emailVal=document.getElementById('mpEmail').value.trim();
+    if(!emailVal){errEl.textContent=t('ui.emailRequired');return}
+    if(newPass&&newPass!==confirmPass){errEl.textContent=t('ui.passwordMismatch');return}
+    errEl.textContent='';
+    saveBtn.textContent='SAVING...';saveBtn.style.pointerEvents='none';
+    try{
+      entry.email=document.getElementById('mpEmail').value.trim()||undefined;
+      entry.mobile=document.getElementById('mpMobile').value.trim()||undefined;
+      if(newPass)entry.pass=newPass;
+      if(isOwnProfile){loggedInEmail=entry.email||null;loggedInMobile=entry.mobile||null}
+      if(await saveAuth()){showToast(t('ui.profileSaved'))}
+    }catch(e){errEl.textContent='Error: '+e.message}finally{saveBtn.textContent=t('form.save');saveBtn.style.pointerEvents='auto'}
+  }}
+}
 
 /* Auth / Login */
 const loginIconBtn=document.getElementById('loginIconBtn'),userDropdown=document.getElementById('userDropdown');
@@ -923,7 +957,7 @@ const _abwL=document.getElementById('ambientBtnWrap');if(_abwL)_abwL.style.displ
 if(typeof window._ambientStop==='function')window._ambientStop();
 clearCompare();closeCompareModal();
 if(typeof setLanguage==='function')setLanguage('en');
-applySeasonalTheme();document.getElementById('navFavorites').style.display='none';const _bnf=document.getElementById('bnFavorites');if(_bnf)_bnf.style.display='none';document.getElementById('navCalendar').style.display='none';document.getElementById('navAnalytics').style.display='none';document.getElementById('navProfileDb').style.display='none';document.getElementById('navBookings').style.display='none';document.getElementById('navVacation').style.display='none';document.querySelectorAll('.page-edit-btn').forEach(b=>b.style.display='none');if(document.getElementById('favoritesPage').classList.contains('active')||document.getElementById('calendarPage').classList.contains('active')||document.getElementById('analyticsPage').classList.contains('active')||document.getElementById('profileDbPage').classList.contains('active')||document.getElementById('bookingsPage').classList.contains('active')||document.getElementById('vacationPage').classList.contains('active'))showPage('homePage');renderDropdown();renderFilters();renderGrid();renderRoster();renderHome();document.body.classList.remove('vip-mode');_vipSparkles.forEach(s=>s.remove());_vipSparkles.length=0}}
+applySeasonalTheme();document.getElementById('navFavorites').style.display='none';const _bnf=document.getElementById('bnFavorites');if(_bnf)_bnf.style.display='none';document.getElementById('navCalendar').style.display='none';document.getElementById('navAnalytics').style.display='none';document.getElementById('navProfileDb').style.display='none';document.getElementById('navBookings').style.display='none';document.getElementById('navVacation').style.display='none';document.querySelectorAll('.page-edit-btn').forEach(b=>b.style.display='none');if(document.getElementById('favoritesPage').classList.contains('active')||document.getElementById('calendarPage').classList.contains('active')||document.getElementById('analyticsPage').classList.contains('active')||document.getElementById('profileDbPage').classList.contains('active')||document.getElementById('bookingsPage').classList.contains('active')||document.getElementById('vacationPage').classList.contains('active')||document.getElementById('myProfilePage').classList.contains('active'))showPage('homePage');renderDropdown();renderFilters();renderGrid();renderRoster();renderHome();document.body.classList.remove('vip-mode');_vipSparkles.forEach(s=>s.remove());_vipSparkles.length=0}}
 else{loginIconBtn.classList.remove('logged-in');userDropdown.innerHTML=''}}
 
 function showAuthSignIn(){

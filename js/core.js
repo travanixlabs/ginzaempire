@@ -763,7 +763,8 @@ const Router = (function() {
     analyticsPage:  '/analytics',
     profileDbPage:  '/profile-database',
     bookingsPage:   '/bookings',
-    vacationPage:   '/vacation'
+    vacationPage:   '/vacation',
+    myProfilePage:  '/my-profile'
   };
   const PATH_TO_PAGE = {};
   for (const id in PAGE_ROUTES) PATH_TO_PAGE[PAGE_ROUTES[id]] = id;
@@ -843,9 +844,49 @@ const Router = (function() {
       return true;
     }
 
+    /* My Profile deep link: /my-profile (own) */
+    if (path === '/my-profile') {
+      if (!loggedIn) {
+        _suppressPush = true;
+        showPage('homePage');
+        _suppressPush = false;
+        replace('/', 'Ginza Empire');
+        return true;
+      }
+      _suppressPush = true;
+      if (typeof _mpViewUser !== 'undefined') _mpViewUser = loggedInUser;
+      showPage('myProfilePage');
+      _suppressPush = false;
+      return true;
+    }
+
+    /* Admin viewing user profile: /profile-database/{username} */
+    const pdbUserMatch = path.match(/^\/profile-database\/(.+)$/);
+    if (pdbUserMatch) {
+      if (!loggedIn || !isAdmin()) {
+        _suppressPush = true;
+        showPage('homePage');
+        _suppressPush = false;
+        replace('/', 'Ginza Empire');
+        return true;
+      }
+      _suppressPush = true;
+      if (typeof _mpViewUser !== 'undefined') _mpViewUser = decodeURIComponent(pdbUserMatch[1]);
+      showPage('myProfilePage');
+      _suppressPush = false;
+      return true;
+    }
+
     /* Standard pages */
     const pageId = PATH_TO_PAGE[path];
     if (pageId) {
+      if (pageId === 'myProfilePage' && !loggedIn) {
+        _suppressPush = true;
+        showPage('homePage');
+        _suppressPush = false;
+        replace('/', 'Ginza Empire');
+        return true;
+      }
       if (pageId === 'favoritesPage' && !loggedIn) {
         _suppressPush = true;
         showPage('homePage');

@@ -1017,6 +1017,8 @@ tr:hover .cal-bulk-actions,.cal-bulk-actions:focus-within{opacity:1;pointer-even
 .pdb-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.04);font-size:13px;color:rgba(255,255,255,0.8);letter-spacing:0.5px}
 .pdb-table tr:hover td{background:rgba(255,255,255,0.02)}
 .pdb-user{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;color:#fff}
+.pdb-user-link{color:inherit;text-decoration:none;transition:color .2s}
+.pdb-user-link:hover{color:var(--accent);text-decoration:underline}
 .pdb-bookings{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-align:center;color:var(--accent);white-space:nowrap}
 .pdb-bk-approved,.pdb-bk-pending,.pdb-bk-rejected{font-size:10px;padding:1px 5px;border-radius:3px;margin-left:2px;letter-spacing:0.5px}
 .pdb-bk-pending{color:rgba(255,200,50,0.9);background:rgba(255,200,50,0.1)}
@@ -1265,6 +1267,12 @@ body.vip-mode .girl-card:hover{box-shadow:0 24px 70px rgba(180,74,255,0.2),0 0 0
 .admin-bk-edit-row{display:flex;justify-content:space-between;align-items:center;font-size:13px}
 .admin-bk-input{-webkit-appearance:none;appearance:none;background:#16161e url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E") no-repeat right 8px center;background-size:10px;border:1px solid rgba(255,255,255,.12);border-radius:6px;color:#e0e0e0;font-size:12px;padding:4px 24px 4px 8px;color-scheme:dark}
 .admin-bk-input option{background:#16161e;color:#e0e0e0}
+
+/* ── My Profile Page Layout ── */
+.mp-page-layout{max-width:480px}
+.mp-page-form{display:flex;flex-direction:column;gap:4px;margin-top:20px}
+.mp-bk-status-approved{color:rgba(80,220,120,.9)}
+.mp-bk-status-pending{color:rgba(255,200,50,.9)}
 
 /* ── My Profile — Booking Status Card ── */
 .mp-booking-hdr{font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}
