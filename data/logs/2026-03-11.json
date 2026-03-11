@@ -1409,5 +1409,11 @@
     "uuid": "v_mmlqtplr_6mdfy2au",
     "timestamp": "2026-03-11T10:55:45.764Z",
     "page": "bookings"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlqtplr_6mdfy2au",
+    "timestamp": "2026-03-11T10:55:48.652Z",
+    "page": "profileDb"
   }
 ]
