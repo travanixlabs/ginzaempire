@@ -1,1 +1,14 @@
-
+[
+  {
+    "ts": "2026-03-11T11:06:44.967Z",
+    "type": "booking_rejected",
+    "bookingId": "mmlx5b3r6ud2ogp5id5",
+    "user": "member",
+    "girlName": "Vanilla",
+    "date": "2026-03-11",
+    "startMin": 1200,
+    "endMin": 1320,
+    "status": "rejected",
+    "by": "Ginza Empire"
+  }
+]
