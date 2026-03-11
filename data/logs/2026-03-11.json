@@ -2308,5 +2308,11 @@
     "uuid": "v_mmlqtplr_6mdfy2au",
     "timestamp": "2026-03-11T11:54:53.992Z",
     "page": "myProfile"
+  },
+  {
+    "type": "profileView",
+    "uuid": "v_mmlqtplr_6mdfy2au",
+    "timestamp": "2026-03-11T11:54:56.752Z",
+    "profile": "Yume"
   }
 ]
