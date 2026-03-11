@@ -1339,5 +1339,11 @@
     "uuid": "v_mmlqtplr_6mdfy2au",
     "timestamp": "2026-03-11T10:50:52.676Z",
     "profile": "Vanilla"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlqtplr_6mdfy2au",
+    "timestamp": "2026-03-11T10:51:02.684Z",
+    "page": "bookings"
   }
 ]
