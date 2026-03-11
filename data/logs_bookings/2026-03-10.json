@@ -1,0 +1,128 @@
+[
+  {
+    "ts": "2026-03-10T06:17:31.859Z",
+    "type": "booking_created",
+    "bookingId": "mmk7x6smh5as2y5izj",
+    "user": "member",
+    "girlName": "Apple",
+    "date": "2026-03-11",
+    "startMin": 720,
+    "endMin": 810,
+    "status": "pending"
+  },
+  {
+    "ts": "2026-03-10T06:18:38.409Z",
+    "type": "booking_approved",
+    "bookingId": "mmk7x6smh5as2y5izj",
+    "user": "member",
+    "girlName": "Apple",
+    "date": "2026-03-11",
+    "startMin": 720,
+    "endMin": 810,
+    "status": "approved",
+    "by": "admin"
+  },
+  {
+    "ts": "2026-03-10T06:18:58.684Z",
+    "type": "booking_admin_created",
+    "bookingId": "mmk7z1raevgk00zyyhm",
+    "user": "member",
+    "girlName": "Apple",
+    "date": "2026-03-10",
+    "startMin": 840,
+    "endMin": 900,
+    "status": "approved",
+    "by": "admin"
+  },
+  {
+    "ts": "2026-03-10T06:19:05.023Z",
+    "type": "booking_edited",
+    "bookingId": "mmk7z1raevgk00zyyhm",
+    "user": "member",
+    "girlName": "Apple",
+    "date": "2026-03-10",
+    "startMin": 840,
+    "endMin": 930,
+    "status": "approved",
+    "by": "admin",
+    "prev": {
+      "startMin": 840,
+      "endMin": 900
+    }
+  },
+  {
+    "ts": "2026-03-10T06:19:11.498Z",
+    "type": "booking_rejected",
+    "bookingId": "mmk7z1raevgk00zyyhm",
+    "user": "member",
+    "girlName": "Apple",
+    "date": "2026-03-10",
+    "startMin": 840,
+    "endMin": 930,
+    "status": "rejected",
+    "by": "admin"
+  },
+  {
+    "ts": "2026-03-10T06:20:59.879Z",
+    "type": "booking_rejected",
+    "bookingId": "mmk7x6smh5as2y5izj",
+    "user": "member",
+    "girlName": "Apple",
+    "date": "2026-03-11",
+    "startMin": 720,
+    "endMin": 810,
+    "status": "rejected",
+    "by": "admin"
+  },
+  {
+    "ts": "2026-03-10T06:25:04.798Z",
+    "type": "booking_created",
+    "bookingId": "mmk86w74imni6x8wwtn",
+    "user": "member",
+    "girlName": "Vanilla",
+    "date": "2026-03-11",
+    "startMin": 780,
+    "endMin": 900,
+    "status": "pending"
+  },
+  {
+    "ts": "2026-03-10T06:28:18.592Z",
+    "type": "booking_approved",
+    "bookingId": "mmk86w74imni6x8wwtn",
+    "user": "member",
+    "girlName": "Vanilla",
+    "date": "2026-03-11",
+    "startMin": 780,
+    "endMin": 900,
+    "status": "approved",
+    "by": "admin"
+  },
+  {
+    "ts": "2026-03-10T06:28:26.146Z",
+    "type": "booking_edited",
+    "bookingId": "mmk86w74imni6x8wwtn",
+    "user": "member",
+    "girlName": "Vanilla",
+    "date": "2026-03-11",
+    "startMin": 780,
+    "endMin": 870,
+    "status": "approved",
+    "by": "admin",
+    "prev": {
+      "startMin": 780,
+      "endMin": 900
+    }
+  },
+  {
+    "ts": "2026-03-10T06:28:38.214Z",
+    "type": "booking_admin_created",
+    "bookingId": "mmk8bgzkaeg68u9udom",
+    "user": "member",
+    "girlName": "Apple",
+    "date": "2026-03-11",
+    "startMin": 840,
+    "endMin": 930,
+    "status": "approved",
+    "by": "admin"
+  }
+]

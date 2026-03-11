@@ -1,0 +1,7 @@
+# Force LF line endings for web assets to match what GitHub Pages serves
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.xml text eol=lf
+*.svg text eol=lf

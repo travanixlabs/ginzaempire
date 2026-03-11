@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sydneyginza.github.io/sitemap.xml

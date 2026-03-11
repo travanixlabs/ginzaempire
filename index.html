@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-iYfoPByYg6I6cDvOWiRaDkqvV9Y0NY5f2Zq2sNe55hI='; style-src 'self' 'unsafe-inline'; img-src 'self' https://raw.githubusercontent.com data:; font-src 'self'; connect-src 'self' https://github-proxy.sydneyginza-api-2.workers.dev; frame-src https://www.google.com; base-uri 'self'; form-action 'self'">
+<title>Ginza Empire</title>
+<meta name="description" content="Sydney's premier Asian bordello in Surry Hills. Browse our roster of stunning girls, check live availability, and view rates. Open daily 10:30am–1am at 310 Cleveland St.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ginza Empire">
+<meta property="og:title" content="Ginza Empire – Sydney's Premier Asian Bordello">
+<meta property="og:description" content="Sydney's premier Asian bordello in Surry Hills. Browse our roster of stunning girls, check live availability, and view rates. Open daily 10:30am–1am at 310 Cleveland St.">
+<meta property="og:url" content="https://sydneyginza.github.io">
+<meta property="og:image" content="https://raw.githubusercontent.com/sydneyginza/sydneyginza.github.io/main/Images/Homepage/Homepage_1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ginza Empire – Sydney's Premier Asian Bordello">
+<meta name="twitter:description" content="Sydney's premier Asian bordello in Surry Hills. Browse our roster of stunning girls, check live availability, and view rates.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/sydneyginza/sydneyginza.github.io/main/Images/Homepage/Homepage_1.jpg">
+<link rel="canonical" href="https://sydneyginza.github.io">
+<meta name="rating" content="adult">
+<link rel="icon" type="image/png" href="/fav-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://github-proxy.sydneyginza-api-2.workers.dev" crossorigin>
+<link rel="preload" href="/fonts/rajdhani-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/rajdhani-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+  // SPA redirect resolver: restore the real URL after 404.html redirect
+  // e.g. /?_sp=%2Fgirls%2FAkemi → /girls/Akemi (via replaceState)
+  (function(){
+    var m = window.location.search.match(/[?&]_sp=([^&]+)/);
+    if (m) {
+      var path = decodeURIComponent(m[1]);
+      // Clean the URL: remove the _sp param, restore the original path
+      window.history.replaceState(null, '', path + window.location.hash);
+    }
+  })();
+</script>
+<style>@font-face{font-family:'Orbitron';font-style:normal;font-weight:400 900;font-display:swap;src:url('/fonts/orbitron-var-latin.woff2') format('woff2')}@font-face{font-family:'Rajdhani';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/rajdhani-400-latin.woff2') format('woff2')}@font-face{font-family:'Rajdhani';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/rajdhani-600-latin.woff2') format('woff2')}*{margin:0;padding:0;box-sizing:border-box}:root{--accent:#b44aff;--accent2:#ff6f00;--gold:#c9952c;--gold-light:#f5e6a3;--bg-dark:#0a0a0f;--bg-card:rgba(255,255,255,0.06);--bg-card-hover:rgba(255,255,255,0.09);--text:#e0e0e0;--text-dim:#888;--border-subtle:rgba(255,255,255,0.1)}body{background:var(--bg-dark);color:var(--text);font-family:'Rajdhani',sans-serif;overflow-x:hidden;min-height:100vh}nav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:70px;background:rgba(10,10,15,0.85);backdrop-filter:blur(20px);border-bottom:none}.logo{font-family:'Orbitron',sans-serif;font-weight:900;font-size:26px;letter-spacing:5px;text-transform:uppercase;background:linear-gradient(135deg,#c9952c,#f5e6a3,#c9952c,#e1b97e,#f5e6a3,#c9952c);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 8px rgba(201,149,44,0.4))}.page{display:none;opacity:0;position:relative;z-index:1}.page.active{display:block;opacity:1}.page.page-enter{animation:pageFadeIn .3s ease}@keyframes pageFadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.section{padding:100px 40px;padding-top:120px;max-width:1400px;margin:0 auto}.girls-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}.skeleton-shimmer{background:linear-gradient(90deg,rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.07) 40%,rgba(255,255,255,0.03) 80%);background-size:800px 100%;animation:skeletonShimmer 1.8s ease-in-out infinite}@keyframes skeletonShimmer{0%{background-position:-400px 0}100%{background-position:400px 0}}.skeleton-card{background:var(--bg-card);border:1px solid rgba(255,255,255,0.06);overflow:hidden;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))}.skeleton-card .skel-img{width:100%;aspect-ratio:3/4}.skeleton-card .skel-info{padding:16px;display:flex;flex-direction:column;gap:8px}.skeleton-card .skel-line{height:12px;border-radius:2px}.skeleton-card .skel-line.w60{width:60%}.skeleton-card .skel-line.w40{width:40%}.skeleton-card .skel-line.w80{width:80%}.skeleton-fade{transition:opacity .4s ease;opacity:1}</style>
+<link rel="stylesheet" href="/styles.min.css" media="print" integrity="sha384-B8jCrbWtBh2y+yhn+hYcAPYiNJ+5LfpCdNaoNNLr3XOU3Q0Ba5D4iCvd6rfVTAzD" crossorigin="anonymous">
+<noscript><link rel="stylesheet" href="/styles.min.css" media="all"></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://sydneyginza.github.io/#empire",
+      "name": "Ginza Empire",
+      "url": "https://sydneyginza.github.io",
+      "telephone": ["+61282832130", "+61416020278"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "310 Cleveland St",
+        "addressLocality": "Surry Hills",
+        "addressRegion": "NSW",
+        "postalCode": "2010",
+        "addressCountry": "AU"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "10:30",
+        "closes": "25:00"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are Ginza Empire's opening hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ginza Empire is open Monday to Sunday from 10:30am to 1:00am."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Ginza Empire located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ginza Empire is located at 310 Cleveland St, Surry Hills NSW 2010, Sydney, Australia. Entry is via the back entrance from Goodlet Lane."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the room hire rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Room hire rates are: 30 minutes for $30, 45 minutes for $45, 60 minutes for $60, and over 60 minutes is negotiable."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json" id="breadcrumbLd"></script>
+</head>
+<body>
+<a href="#homePage" class="skip-nav" data-i18n="a11y.skipNav">Skip to main content</a>
+<div id="a11yAnnouncer" class="sr-only" aria-live="assertive" aria-atomic="true"></div>
+<noscript><div style="background:#13131e;color:#e0e0e0;font-family:sans-serif;text-align:center;padding:60px 20px;min-height:100vh;display:flex;align-items:center;justify-content:center"><div><h1 style="font-size:28px;letter-spacing:4px;margin-bottom:16px;color:#c9952c">GINZA EMPIRE</h1><p style="font-size:16px;color:#888;max-width:400px;line-height:1.6">This site requires JavaScript to run. Please enable JavaScript in your browser settings and reload the page.</p><p style="margin-top:20px;font-size:14px;color:#666">310 Cleveland St, Surry Hills NSW 2010 &bull; 02 8283 2130</p></div></div></noscript>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="offline-banner" id="offlineBanner"><span class="offline-dot"></span><span data-i18n="ui.offline"></span></div>
+<div id="privacyBanner" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9998;align-items:center;justify-content:center">
+<div style="background:#13131e;border:1px solid rgba(180,74,255,0.35);padding:32px 28px;max-width:400px;width:90%;font-family:'Rajdhani',sans-serif;text-align:center;box-shadow:0 0 40px rgba(180,74,255,0.15)">
+<div style="font-size:18px;letter-spacing:2px;color:#fff;margin-bottom:14px;text-transform:uppercase" data-i18n="privacy.title"></div>
+<p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;margin:0 0 22px" data-i18n="privacy.body"></p>
+<button id="privacyDismissBtn" style="background:rgba(180,74,255,0.18);border:1px solid rgba(180,74,255,0.45);color:#fff;font-family:'Rajdhani',sans-serif;font-size:14px;letter-spacing:2px;padding:8px 32px;cursor:pointer;text-transform:uppercase" data-i18n="privacy.btn"></button>
+</div>
+</div>
+<div class="particles" id="particles"></div>
+<nav>
+<div class="logo" data-i18n="page.title"></div>
+<div class="nav-right">
+<div class="nav-menu-wrap">
+<button class="nav-menu-btn" id="navMenuBtn" aria-expanded="false" aria-controls="navDropdown"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg><span data-i18n="nav.menu"></span></button>
+<div class="nav-dropdown" id="navDropdown">
+<a href="#" id="navHome" class="active"><span data-i18n="nav.home"></span></a>
+<a href="#" id="navFavorites" style="display:none"><span class="nav-fav-wrap"><span data-i18n="nav.favorites"></span><span class="nav-fav-badge" id="navFavBadge"></span></span></a>
+<a href="#" id="navRoster"><span data-i18n="nav.roster"></span></a>
+<a href="#" id="navGirls"><span data-i18n="nav.girls"></span></a>
+<a href="#" id="navValue"><span data-i18n="nav.rates"></span></a>
+<a href="#" id="navEmployment"><span data-i18n="nav.employment"></span></a>
+<a href="#" id="navCalendar" style="display:none"><span data-i18n="nav.calendar"></span></a>
+<a href="#" id="navBookings" style="display:none"><span data-i18n="nav.bookings"></span></a>
+<a href="#" id="navVacation" style="display:none"><span data-i18n="nav.vacation"></span></a>
+<a href="#" id="navAnalytics" style="display:none"><span data-i18n="nav.analytics"></span></a>
+<a href="#" id="navProfileDb" style="display:none"><span data-i18n="nav.profileDb"></span></a>
+</div>
+</div>
+<div style="position:relative">
+<button class="login-icon-btn" id="langBtn" title="Language" aria-label="Select language" aria-expanded="false" aria-controls="langDropdown"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.91-4.33-3.56zm2.95-8H5.08c.96-1.65 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg></button>
+<div class="lang-dropdown" id="langDropdown">
+<button class="lang-option" data-lang="en">EN</button>
+<button class="lang-option" data-lang="ja">日本語</button>
+<button class="lang-option" data-lang="ko">한국어</button>
+<button class="lang-option" data-lang="zh">中文</button>
+</div>
+</div>
+<div style="position:relative;display:none" id="themeBtnWrap">
+<button class="login-icon-btn" id="themeBtn" aria-label="Theme" aria-expanded="false" aria-controls="themeDropdown"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-1 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></button>
+<div class="theme-dropdown" id="themeDropdown">
+<button class="theme-option active" data-theme="default"><span class="theme-swatch" style="background:linear-gradient(135deg,#b44aff,#c9952c)"></span><span data-i18n="theme.default"></span></button>
+<button class="theme-option" data-theme="amber"><span class="theme-swatch" style="background:linear-gradient(135deg,#ff8f00,#d4a373)"></span><span data-i18n="theme.amber"></span></button>
+<button class="theme-option" data-theme="arctic"><span class="theme-swatch" style="background:linear-gradient(135deg,#80deea,#e0f7fa)"></span><span data-i18n="theme.arctic"></span></button>
+<button class="theme-option" data-theme="bronze"><span class="theme-swatch" style="background:linear-gradient(135deg,#cd7f32,#5d4037)"></span><span data-i18n="theme.bronze"></span></button>
+<button class="theme-option" data-theme="cobalt"><span class="theme-swatch" style="background:linear-gradient(135deg,#1e90ff,#5bc0be)"></span><span data-i18n="theme.cobalt"></span></button>
+<button class="theme-option" data-theme="crimson"><span class="theme-swatch" style="background:linear-gradient(135deg,#e63946,#d4a373)"></span><span data-i18n="theme.crimson"></span></button>
+<button class="theme-option" data-theme="emerald"><span class="theme-swatch" style="background:linear-gradient(135deg,#00e676,#c0c0c0)"></span><span data-i18n="theme.emerald"></span></button>
+<button class="theme-option" data-theme="ivory"><span class="theme-swatch" style="background:linear-gradient(135deg,#d4af37,#f5f0e1)"></span><span data-i18n="theme.ivory"></span></button>
+<button class="theme-option" data-theme="lavender"><span class="theme-swatch" style="background:linear-gradient(135deg,#b388ff,#e1bee7)"></span><span data-i18n="theme.lavender"></span></button>
+<button class="theme-option" data-theme="midnight"><span class="theme-swatch" style="background:linear-gradient(135deg,#b44aff,#c9952c)"></span><span data-i18n="theme.midnight"></span></button>
+<button class="theme-option" data-theme="neon"><span class="theme-swatch" style="background:linear-gradient(135deg,#00d4ff,#ff2d7b)"></span><span data-i18n="theme.neon"></span></button>
+<button class="theme-option" data-theme="ocean"><span class="theme-swatch" style="background:linear-gradient(135deg,#0097a7,#26c6da)"></span><span data-i18n="theme.ocean"></span></button>
+<button class="theme-option" data-theme="onyx"><span class="theme-swatch" style="background:linear-gradient(135deg,#e0e0e0,#757575)"></span><span data-i18n="theme.onyx"></span></button>
+<button class="theme-option" data-theme="phantom"><span class="theme-swatch" style="background:linear-gradient(135deg,#78909c,#4db6ac)"></span><span data-i18n="theme.phantom"></span></button>
+<button class="theme-option" data-theme="rosegold"><span class="theme-swatch" style="background:linear-gradient(135deg,#e8a0bf,#c9956b)"></span><span data-i18n="theme.rosegold"></span></button>
+<button class="theme-option" data-theme="rust"><span class="theme-swatch" style="background:linear-gradient(135deg,#bf360c,#8d6e63)"></span><span data-i18n="theme.rust"></span></button>
+<button class="theme-option" data-theme="sakura2"><span class="theme-swatch" style="background:linear-gradient(135deg,#f48fb1,#fce4ec)"></span><span data-i18n="theme.sakura2"></span></button>
+<button class="theme-option" data-theme="slate"><span class="theme-swatch" style="background:linear-gradient(135deg,#90a4ae,#546e7a)"></span><span data-i18n="theme.slate"></span></button>
+<button class="theme-option" data-theme="sunset"><span class="theme-swatch" style="background:linear-gradient(135deg,#ff6d00,#ff1744)"></span><span data-i18n="theme.sunset"></span></button>
+<button class="theme-option" data-theme="violet"><span class="theme-swatch" style="background:linear-gradient(135deg,#9c27b0,#e040fb)"></span><span data-i18n="theme.violet"></span></button>
+</div>
+</div>
+<div style="position:relative;display:none" id="ambientBtnWrap">
+<button class="login-icon-btn" id="ambientBtn" aria-label="Ambient sound" title="Ambient Sound"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+<div class="amb-vol-wrap" id="ambVolWrap">
+<span class="amb-vol-label">Sound</span>
+<div class="amb-sound-list" id="ambSoundList">
+<button class="amb-sound-opt active" data-sound="romantic">Romantic</button>
+<button class="amb-sound-opt" data-sound="jazz">Jazz Lounge</button>
+<button class="amb-sound-opt" data-sound="lofi">Lo-fi Chill</button>
+<button class="amb-sound-opt" data-sound="midnight">Midnight Drift</button>
+<button class="amb-sound-opt" data-sound="bossa">Bossa Nova</button>
+</div>
+<span class="amb-vol-label" style="margin-top:4px">Volume</span>
+<input type="range" class="amb-vol-slider" id="ambVolSlider" min="0" max="1" step="0.05" value="0.3">
+</div>
+</div>
+<div style="position:relative">
+<button class="login-icon-btn" id="loginIconBtn" aria-label="Account" aria-expanded="false" aria-controls="userDropdown"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></button>
+<div class="user-dropdown" id="userDropdown"></div>
+</div></div></nav>
+
+<div class="page active" id="homePage"><section class="home-section">
+<h1 class="home-title" data-i18n="page.title"></h1>
+<div class="home-tagline" data-i18n="home.tagline"></div>
+<div class="home-search-wrap">
+<div class="home-search">
+<input type="text" class="home-search-input" id="homeSearchInput" data-i18n-ph="ui.search" autocomplete="off">
+<button class="home-search-btn" id="homeSearchBtn"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button>
+</div>
+</div>
+<div class="home-images" id="homeImages"><div class="skeleton-fade" id="homeSkeleton"><div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap"><div class="skeleton-home-img skeleton-shimmer"></div><div class="skeleton-home-img skeleton-shimmer"></div><div class="skeleton-home-img skeleton-shimmer"></div><div class="skeleton-home-img skeleton-shimmer"></div></div></div></div>
+<div class="home-new-girls-strip" id="homeNewGirls" style="display:none"></div>
+<div class="home-avail-now" id="homeAvailNow" style="display:none"></div>
+<div class="home-mid">
+<div class="home-mid-left">
+<div class="home-divider-sm"></div>
+<h2 class="logo" style="margin-bottom:20px" data-i18n="home.announcement"></h2>
+<p class="home-summary" id="homeAnnounceText" data-i18n="home.announceDefault"></p>
+<div class="home-announce" id="homeAnnounce"></div>
+</div>
+</div>
+<div class="home-divider"></div>
+<article id="homeWelcomeEn">
+<h2 class="logo" style="margin-bottom:20px" data-i18n="home.welcomeTitle"></h2>
+<p class="home-summary" data-i18n="home.welcomeP1"></p>
+<p class="home-summary" data-i18n="home.welcomeP2"></p>
+<p class="home-summary" data-i18n="home.welcomeP3"></p>
+<p class="home-summary" data-i18n="home.welcomeP4"></p>
+</article>
+<h2 class="logo" style="margin-bottom:20px" data-i18n="home.location"></h2>
+<address class="home-summary" id="homeLocation" data-i18n-html="home.locationHtml"></address>
+<div class="home-map" id="homeMap"><iframe data-src="https://www.google.com/maps?q=310+Cleveland+St,+Surry+Hills+NSW+2010,+Australia&output=embed" width="100%" height="280" style="border:0;background:var(--bg-card)" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<h2 class="logo" style="margin-bottom:20px" data-i18n="home.hours"></h2>
+<p class="home-summary" id="homeHours" data-i18n="home.hoursText"></p>
+</section></div>
+
+<div class="page" id="rosterPage"><section class="section">
+<div class="section-header"><div class="section-line"></div><div><div class="section-tag" data-i18n="page.titlelower"></div><div class="section-title" data-i18n="page.roster"></div></div><div class="filter-bar" id="rosterFilterBar"><div class="skeleton-fade" id="rosterFilterSkeleton" style="display:contents"><div class="skeleton-filter-btn skeleton-shimmer"></div><div class="skeleton-filter-btn skeleton-shimmer"></div><div class="skeleton-filter-btn skeleton-shimmer"></div></div></div></div>
+<div id="rosterAvailBar"></div>
+<div class="page-with-sidebar">
+<div class="page-main-content">
+<div class="girls-grid" id="rosterGrid"><div class="skeleton-fade" id="rosterSkeleton" style="display:contents"><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w60 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w60 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w60 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w80 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w60 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w80 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div></div></div>
+</div>
+</div>
+</section></div>
+
+<div class="page" id="listPage"><section class="section">
+<div class="sticky-filter-wrap">
+<div class="section-header"><div class="section-line"></div><div><div class="section-tag" data-i18n="page.titlelower"></div><div class="section-title" data-i18n="page.girls"></div></div><div class="filter-bar" id="filterBar"><div class="skeleton-fade" id="girlsFilterSkeleton" style="display:contents"><div class="skeleton-filter-btn skeleton-shimmer"></div><div class="skeleton-filter-btn skeleton-shimmer"></div><div class="skeleton-filter-btn skeleton-shimmer"></div></div></div></div>
+<div id="activeFilterChips" class="active-filter-chips" style="display:none"></div>
+</div>
+<div class="page-with-sidebar">
+<div class="page-main-content">
+<div class="girls-grid" id="girlsGrid"><div class="skeleton-fade" id="girlsSkeleton" style="display:contents"><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w60 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w60 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w80 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w60 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w80 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w60 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div></div></div>
+</div>
+</div>
+</section></div>
+
+<div class="page" id="favoritesPage"><section class="section">
+<div class="section-header"><div class="section-line"></div><div><div class="section-tag" data-i18n="page.titlelower"></div><div class="section-title" data-i18n="page.favorites"></div></div></div>
+<div class="girls-grid" id="favoritesGrid"><div class="skeleton-fade" id="favoritesSkeleton" style="display:contents"><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w60 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w80 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div><div class="skeleton-card"><div class="skel-img skeleton-shimmer"></div><div class="skel-info"><div class="skel-line w60 skeleton-shimmer"></div><div class="skel-line w40 skeleton-shimmer"></div></div></div></div></div>
+</section></div>
+
+<div class="page" id="valuePage"><section class="section">
+<div class="section-header"><div class="section-line"></div><div><div class="section-tag" data-i18n="page.titlelower"></div><div class="section-title" data-i18n="page.rates"></div></div></div>
+<p class="home-summary" id="ratesIntro" data-i18n="rates.intro"></p>
+<div style="overflow-x:auto;max-width:400px;margin:0 auto"><table class="cal-table" id="valueTable"><tbody id="valueTableSkeleton"><tr><td><div class="skel-line w60 skeleton-shimmer" style="height:16px;margin:8px 0"></div></td><td><div class="skel-line w40 skeleton-shimmer" style="height:16px;margin:8px 0"></div></td></tr><tr><td><div class="skel-line w60 skeleton-shimmer" style="height:16px;margin:8px 0"></div></td><td><div class="skel-line w40 skeleton-shimmer" style="height:16px;margin:8px 0"></div></td></tr><tr><td><div class="skel-line w60 skeleton-shimmer" style="height:16px;margin:8px 0"></div></td><td><div class="skel-line w40 skeleton-shimmer" style="height:16px;margin:8px 0"></div></td></tr></tbody></table></div>
+<div style="margin-top:60px;text-align:center">
+<div class="home-divider"></div>
+<p class="home-summary" id="ratesLegal" data-i18n="rates.legal"></p>
+<div id="ratesRoomSection">
+<h2 class="logo" style="margin-bottom:20px" data-i18n="rates.roomTitle"></h2>
+<p class="home-summary" data-i18n="rates.room30"></p>
+<p class="home-summary" data-i18n="rates.room45"></p>
+<p class="home-summary" data-i18n="rates.room60"></p>
+<p class="home-summary" data-i18n="rates.roomOver"></p>
+<p class="home-summary" data-i18n="rates.disclaimer"></p>
+</div>
+</div>
+</section></div>
+
+<div class="page" id="employmentPage"><section class="section">
+<div class="section-header"><div class="section-line"></div><div><div class="section-tag" data-i18n="page.titlelower"></div><div class="section-title" data-i18n="page.employment"></div></div></div>
+<div style="margin-top:60px;text-align:center">
+<div class="home-divider"></div>
+<div id="employContent">
+<div id="employContentEn">
+<h2 class="logo" style="margin-bottom:40px" data-i18n="emp.jobTitle"></h2>
+<p class="home-summary" data-i18n="emp.tagline"></p>
+<h2 class="logo" style="margin-bottom:20px;margin-top:40px" data-i18n="emp.h2Env"></h2>
+<p class="home-summary" data-i18n="emp.p1Env"></p>
+<p class="home-summary" data-i18n="emp.p2Env"></p>
+<p class="home-summary" data-i18n="emp.p3Env"></p>
+<h2 class="logo" style="margin-bottom:20px;margin-top:40px" data-i18n="emp.h2Work"></h2>
+<p class="home-summary" data-i18n="emp.p1Work"></p>
+<p class="home-summary" data-i18n="emp.p2Work"></p>
+<p class="home-summary" data-i18n="emp.p3Work"></p>
+<h2 class="logo" style="margin-bottom:20px;margin-top:40px" data-i18n="emp.h2Health"></h2>
+<p class="home-summary" data-i18n="emp.p1Health"></p>
+<p class="home-summary" data-i18n="emp.p2Health"></p>
+<h2 class="logo" style="margin-bottom:20px;margin-top:40px" data-i18n="emp.h2Contact"></h2>
+<p class="home-summary" data-i18n="emp.p1Contact"></p>
+</div>
+</div><!-- end employContent -->
+<h2 class="logo" style="margin-bottom:60px" data-i18n="emp.contacts"></h2>
+<address class="home-summary" id="employContacts" data-i18n-html="emp.addressHtml"></address>
+</div>
+</section></div>
+
+<div class="page" id="calendarPage"><section class="section">
+<div class="section-header"><div class="section-line"></div><div><div class="section-tag" data-i18n="ui.admin"></div><div class="section-title" data-i18n="nav.calendar"></div></div><div class="filter-bar" id="calFilterBar"></div></div>
+<div class="page-with-sidebar">
+<div class="page-main-content">
+<div style="overflow-x:auto"><div id="calMobileNav"></div><table class="cal-table" id="calTable"></table><div class="skeleton-fade" id="calSkeleton"><div class="skeleton-cal-row"><div class="skeleton-cal-avatar skeleton-shimmer"></div><div style="flex:1;display:flex;flex-direction:column;gap:4px"><div class="skeleton-text w50 skeleton-shimmer" style="height:12px;margin:0"></div><div class="skeleton-text w40 skeleton-shimmer" style="height:10px;margin:0;opacity:.5"></div></div><div class="skeleton-cal-cells"><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div></div></div><div class="skeleton-cal-row"><div class="skeleton-cal-avatar skeleton-shimmer"></div><div style="flex:1;display:flex;flex-direction:column;gap:4px"><div class="skeleton-text w60 skeleton-shimmer" style="height:12px;margin:0"></div><div class="skeleton-text w30 skeleton-shimmer" style="height:10px;margin:0;opacity:.5"></div></div><div class="skeleton-cal-cells"><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div></div></div><div class="skeleton-cal-row"><div class="skeleton-cal-avatar skeleton-shimmer"></div><div style="flex:1;display:flex;flex-direction:column;gap:4px"><div class="skeleton-text w40 skeleton-shimmer" style="height:12px;margin:0"></div><div class="skeleton-text w50 skeleton-shimmer" style="height:10px;margin:0;opacity:.5"></div></div><div class="skeleton-cal-cells"><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div></div></div><div class="skeleton-cal-row"><div class="skeleton-cal-avatar skeleton-shimmer"></div><div style="flex:1;display:flex;flex-direction:column;gap:4px"><div class="skeleton-text w70 skeleton-shimmer" style="height:12px;margin:0"></div><div class="skeleton-text w40 skeleton-shimmer" style="height:10px;margin:0;opacity:.5"></div></div><div class="skeleton-cal-cells"><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div><div class="skeleton-cal-cell skeleton-shimmer"></div></div></div></div></div>
+</div>
+</div>
+</section></div>
+
+<div class="page" id="bookingsPage"><section class="section">
+<div class="section-header"><div class="section-line"></div><div><div class="section-tag" data-i18n="ui.admin"></div><div class="section-title" data-i18n="nav.bookings"></div></div><div class="filter-bar" id="bookingsFilterBar"></div></div>
+<div id="bookingsGrid"></div>
+</section></div>
+
+<div class="page" id="vacationPage"><section class="section">
+<div class="section-header"><div class="section-line"></div><div><div class="section-tag" data-i18n="ui.admin"></div><div class="section-title" data-i18n="nav.vacation"></div></div></div>
+<div id="vacationGrid"></div>
+</section></div>
+
+<div class="page" id="analyticsPage"><section class="section">
+<div class="section-header"><div class="section-line"></div><div><div class="section-tag" data-i18n="ui.admin"></div><div class="section-title" data-i18n="nav.analytics"></div></div></div>
+<div id="analyticsContent"></div>
+<div id="adminLogContent"></div>
+</section></div>
+
+<div class="page" id="profileDbPage"><section class="section">
+<div class="section-header"><div class="section-line"></div><div><div class="section-tag" data-i18n="ui.admin"></div><div class="section-title" data-i18n="nav.profileDb"></div></div></div>
+<div id="profileDbContent"></div>
+</section></div>
+
+<div class="page" id="profilePage">
+<div class="profile-page" id="profileContent"><div style="margin-bottom:20px"><div class="skeleton-shimmer" style="width:120px;height:36px;border-radius:4px"></div></div><div class="profile-layout"><div class="profile-image-area"><div class="gallery-main skeleton-shimmer" style="border-radius:8px;min-height:400px;aspect-ratio:3/4"></div><div class="gallery-thumbs" style="margin-top:8px;display:flex;gap:6px"><div class="skeleton-shimmer" style="width:60px;height:60px;border-radius:4px;flex-shrink:0"></div><div class="skeleton-shimmer" style="width:60px;height:60px;border-radius:4px;flex-shrink:0"></div><div class="skeleton-shimmer" style="width:60px;height:60px;border-radius:4px;flex-shrink:0"></div><div class="skeleton-shimmer" style="width:60px;height:60px;border-radius:4px;flex-shrink:0"></div></div></div><div class="profile-details"><div class="skel-line skeleton-shimmer" style="width:55%;height:30px;margin-bottom:8px;border-radius:4px"></div><div style="display:flex;gap:8px;margin-bottom:20px"><div class="skeleton-shimmer" style="width:80px;height:16px;border-radius:4px"></div><div class="skeleton-shimmer" style="width:140px;height:16px;border-radius:4px"></div></div><div style="display:flex;gap:10px;margin-bottom:24px"><div class="skeleton-shimmer" style="width:100px;height:34px;border-radius:4px"></div><div class="skeleton-shimmer" style="width:80px;height:34px;border-radius:4px"></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px"><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div><div class="skeleton-shimmer" style="height:52px;border-radius:4px"></div></div><div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:20px"><div class="skel-line skeleton-shimmer" style="width:30%;height:18px;margin-bottom:14px;border-radius:4px"></div><div class="skel-line skeleton-shimmer" style="width:100%;height:12px;margin-bottom:8px;border-radius:4px"></div><div class="skel-line skeleton-shimmer" style="width:90%;height:12px;margin-bottom:8px;border-radius:4px"></div><div class="skel-line skeleton-shimmer" style="width:75%;height:12px;border-radius:4px"></div></div></div></div></div>
+</div>
+
+<div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery">
+<button class="lightbox-close" id="lbClose" aria-label="Close gallery">&times;</button>
+<div class="lightbox-counter" id="lbCounter"></div>
+<div class="lightbox-main">
+<button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Previous photo"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg></button>
+<img id="lbImg" src="" alt="">
+<button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Next photo"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></button>
+</div>
+<div class="lightbox-strip" id="lbStrip"></div>
+</div>
+
+<div class="modal-overlay" id="formOverlay" role="dialog" aria-modal="true" aria-labelledby="formTitle"><div class="form-modal">
+<button class="modal-close" id="formClose" aria-label="Close">&times;</button>
+<div class="form-title" id="formTitle" data-i18n="form.addGirl"></div>
+<input type="hidden" id="editIndex" value="-1">
+<div class="form-row"><div class="form-group"><label class="form-label" for="fName" data-i18n="form.name"></label><input class="form-input" id="fName" data-i18n-ph="ph.name"></div><div class="form-group"><label class="form-label" for="fStartDate" data-i18n="form.startDate"></label><input type="date" class="form-input" id="fStartDate"></div></div>
+<div class="form-row country-stats-row"><div class="form-group"><label class="form-label"><span data-i18n="fp.country"></span> <span style="color:var(--text-dim);font-weight:400" data-i18n="ui.select"></span></label><div id="fCountryOptions" class="country-multi-wrap"></div><div id="fCountryTags" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px"></div></div>
+<div class="form-group form-stack-right"><div class="form-group"><label class="form-label" data-i18n="field.age"></label><input class="form-input" id="fAge" type="number" min="0" data-i18n-ph="ph.age"></div><div class="form-group"><label class="form-label" data-i18n="field.body"></label><input class="form-input" id="fBody" type="number" min="0" data-i18n-ph="ph.body"></div><div class="form-group"><label class="form-label" data-i18n="fp.height"></label><input class="form-input" id="fHeight" type="number" min="0" data-i18n-ph="ph.height"></div></div></div>
+<div class="form-row"><div class="form-group"><label class="form-label" data-i18n="field.cup"></label><input class="form-input" id="fCup" data-i18n-ph="ph.cup"></div>
+<div class="form-group"><label class="form-label" data-i18n="field.experience"></label><select class="form-input" id="fExp"><option value="" data-i18n="form.expSelect"></option><option value="Experienced" data-i18n="exp.experienced"></option><option value="Inexperienced" data-i18n="exp.inexperienced"></option></select></div></div>
+<div class="form-row"><div class="form-group"><label class="form-label" data-i18n="field.rates30"></label><div style="position:relative"><span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:15px;pointer-events:none">$</span><input class="form-input" id="fVal1" type="number" min="0" style="padding-left:26px" data-i18n-ph="ph.rate1"></div></div>
+<div class="form-group"><label class="form-label" data-i18n="field.rates45"></label><div style="position:relative"><span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:15px;pointer-events:none">$</span><input class="form-input" id="fVal2" type="number" min="0" style="padding-left:26px" data-i18n-ph="ph.rate2"></div></div></div>
+<div class="form-row"><div class="form-group"><label class="form-label" data-i18n="field.rates60"></label><div style="position:relative"><span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:15px;pointer-events:none">$</span><input class="form-input" id="fVal3" type="number" min="0" style="padding-left:26px" data-i18n-ph="ph.rate3"></div></div>
+<div class="form-group"><label class="form-label" data-i18n="field.special"></label><input class="form-input" id="fSpecial" data-i18n-ph="ph.special"></div></div>
+<div class="form-row"><div class="form-group"><label class="form-label" data-i18n="field.language"></label><input class="form-input" id="fLang" data-i18n-ph="ph.language"></div>
+<div class="form-group"><label class="form-label" data-i18n="field.type"></label><input class="form-input" id="fType" data-i18n-ph="ph.type"></div></div>
+<div class="form-row full"><div class="form-group"><label class="form-label" data-i18n="field.description"></label><textarea class="form-textarea" id="fDesc" data-i18n-ph="ph.description"></textarea></div></div>
+<div class="form-row full"><div class="form-group"><label class="form-label"><span data-i18n="form.photos"></span> <span style="color:var(--text-dim);font-weight:400;" id="fPhotoCount" data-i18n="field.photocount"></span></label>
+<div id="fPhotoGrid" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px"></div></div></div>
+<div class="form-row full"><div class="form-group"><label class="form-label"><span data-i18n="field.labels"></span> <span style="color:var(--text-dim);font-weight:400" data-i18n="ui.type"></span></label>
+<div class="labels-input-wrap"><input class="form-input" id="fLabelInput" data-i18n-ph="ph.label" style="margin-bottom:8px"><div id="fLabelTags" style="display:flex;gap:6px;flex-wrap:wrap"></div></div></div></div>
+<div class="form-actions"><button class="btn btn-secondary" id="formCancel" data-i18n="form.cancel"></button><button class="btn btn-primary" id="formSave" data-i18n="form.save"></button></div>
+</div></div>
+
+<div class="modal-overlay" id="deleteOverlay" role="dialog" aria-modal="true" aria-labelledby="deleteTitle"><div class="form-modal" style="max-width:420px;text-align:center">
+<div class="form-title" id="deleteTitle" style="margin-bottom:12px" data-i18n="form.confirmDelete"></div>
+<p style="color:var(--text-dim);margin-bottom:28px;font-size:15px" id="deleteMsg" data-i18n="ui.confirm"></p>
+<div class="form-actions" style="justify-content:center"><button class="btn btn-secondary" id="deleteCancel" data-i18n="form.cancel"></button><button class="btn btn-danger" id="deleteConfirm" data-i18n="form.delete"></button></div>
+</div></div>
+
+<div class="modal-overlay" id="myProfileOverlay" role="dialog" aria-modal="true" aria-labelledby="myProfileTitle"><div class="form-modal" style="max-width:420px">
+<button class="modal-close" id="myProfileClose" aria-label="Close">&times;</button>
+<div class="form-title" id="myProfileTitle" data-i18n="ui.myProfile"></div>
+<div class="mp-user-display" id="mpUserDisplay"></div>
+<div class="form-row full" style="margin-top:20px"><div class="form-group"><label class="form-label" for="mpEmail" data-i18n="field.email"></label><input class="form-input" id="mpEmail" type="email" placeholder="email@example.com"></div></div>
+<div class="form-row full"><div class="form-group"><label class="form-label" for="mpMobile" data-i18n="field.mobile"></label><input class="form-input" id="mpMobile" type="tel" placeholder="04XX XXX XXX"></div></div>
+<div class="form-row full"><div class="form-group"><label class="form-label" for="mpNewPass" data-i18n="ui.newPassword"></label><input class="form-input" id="mpNewPass" type="password" data-i18n-ph="ui.leaveBlank"></div></div>
+<div class="form-row full"><div class="form-group"><label class="form-label" for="mpConfirmPass" data-i18n="ui.confirmPassword"></label><input class="form-input" id="mpConfirmPass" type="password"></div></div>
+<div id="mpBookingSection" style="display:none;margin-top:16px"><div class="mp-booking-hdr">Your Current Booking</div><div class="mp-booking-card" id="mpBookingCard"></div></div>
+<div class="lf-error" id="mpError" style="margin-bottom:8px"></div>
+<div class="form-actions"><button class="btn btn-secondary" id="myProfileCancel" data-i18n="form.cancel"></button><button class="btn btn-primary" id="myProfileSave" data-i18n="form.save"></button></div>
+</div></div>
+
+<div class="modal-overlay" id="authOverlay" role="dialog" aria-modal="true" aria-label="Authentication"><div class="form-modal" style="max-width:400px">
+<button class="modal-close" id="authClose" aria-label="Close">&times;</button>
+<div id="authContent"></div>
+</div></div>
+
+<div class="modal-overlay" id="welcomeOverlay" role="dialog" aria-modal="true" aria-label="Welcome back"><div class="form-modal" style="max-width:720px">
+<button class="modal-close" id="welcomeClose" aria-label="Close">&times;</button>
+<div id="welcomeContent"></div>
+</div></div>
+
+<div class="copy-time-modal" id="copyTimeModal" role="dialog" aria-modal="true" aria-labelledby="copyTimeTitle">
+<div class="copy-time-box">
+<div class="copy-time-title" id="copyTimeTitle" data-i18n="cal.copyTimesTitle"></div>
+<div class="copy-time-msg" id="copyTimeMsg"></div>
+<div class="copy-time-detail" id="copyTimeDetail"></div>
+<div class="copy-time-actions">
+<button class="btn btn-danger" id="copyTimeCancel" data-i18n="form.cancel"></button>
+<button class="btn btn-secondary" id="copyTimeNew" data-i18n="cal.setNewTime"></button>
+<button class="btn btn-primary" id="copyTimeCopy" data-i18n="cal.copyTimesBtn"></button>
+</div>
+</div>
+</div>
+
+<div class="copy-day-modal" id="copyDayModal" role="dialog" aria-modal="true" aria-labelledby="copyDayTitle">
+<div class="copy-day-box">
+<div class="copy-day-title" id="copyDayTitle" data-i18n="cal.copyDayTitle"></div>
+<div class="copy-day-subtitle" data-i18n="cal.copyDaySub"></div>
+<div class="copy-day-section">
+<div class="copy-day-label" data-i18n="cal.sourceDay"></div>
+<div class="copy-day-sources" id="copyDaySources"></div>
+</div>
+<div class="copy-day-preview" id="copyDayPreview"></div>
+<div class="copy-day-section">
+<div class="copy-day-label" data-i18n="cal.copyTo"></div>
+<div class="copy-day-targets" id="copyDayTargets"></div>
+</div>
+<div class="copy-day-overwrite">
+<label class="copy-day-check-label"><input type="checkbox" id="copyDayOverwrite" checked><span data-i18n="cal.overwrite"></span></label>
+</div>
+<div class="copy-day-actions">
+<button class="btn btn-danger" id="copyDayCancel" data-i18n="form.cancel"></button>
+<button class="btn btn-primary" id="copyDayApply" data-i18n="cal.copyDayBtn"></button>
+</div>
+</div>
+</div>
+
+<div class="bulk-time-modal" id="bulkTimeModal" role="dialog" aria-modal="true" aria-labelledby="bulkTimeName">
+<div class="bulk-time-box">
+<div class="copy-day-title" id="bulkTimeName"></div>
+<div class="copy-day-subtitle" data-i18n="cal.bulkTimeSub"></div>
+<div class="copy-day-section">
+<div class="copy-day-label" data-i18n="cal.days"></div>
+<div class="copy-day-targets" id="bulkTimeDays"></div>
+</div>
+<div class="copy-day-section">
+<div class="copy-day-label" data-i18n="cal.startTime"></div>
+<select class="bulk-time-select" id="bulkTimeStart"></select>
+</div>
+<div class="copy-day-section">
+<div class="copy-day-label" data-i18n="cal.endTime"></div>
+<select class="bulk-time-select" id="bulkTimeEnd"></select>
+</div>
+<div class="copy-day-actions">
+<button class="btn btn-danger" id="bulkTimeCancel" data-i18n="form.cancel"></button>
+<button class="btn btn-primary" id="bulkTimeApply" data-i18n="cal.apply"></button>
+</div>
+</div>
+</div>
+
+<aside class="filter-pane" id="sharedFilterPane"></aside>
+<div class="filter-backdrop" id="filterBackdrop"></div>
+<button class="filter-toggle" id="filterToggle" aria-expanded="false" aria-label="Toggle filters"><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span class="filter-indicator"></span><span class="ft-text"></span></button>
+
+<button class="back-to-top" id="backToTop" title="Back to top" aria-label="Back to top"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor"/></svg><span data-i18n="ui.backToTop"></span></button>
+
+
+<div class="compare-bar" id="compareBar">
+<div class="compare-bar-info"><span class="compare-bar-count" id="compareBarCount">0</span> <span data-i18n="compare.selected"></span></div>
+<div class="compare-bar-actions">
+<button class="btn btn-secondary" id="compareClear" data-i18n="compare.clear"></button>
+<button class="btn btn-primary" id="compareOpen" data-i18n="compare.open"></button>
+</div>
+</div>
+
+<div class="modal-overlay" id="compareOverlay" role="dialog" aria-modal="true" aria-labelledby="compareTitle"><div class="form-modal compare-modal" style="max-width:1100px;position:relative">
+<button class="modal-close" id="compareClose" aria-label="Close">&times;</button>
+<div class="form-title" id="compareTitle" data-i18n="ui.compare"></div>
+<div class="compare-grid" id="compareGrid"></div>
+<div class="compare-actions"><button class="btn btn-secondary" id="compareDone" data-i18n="compare.done"></button></div>
+</div></div>
+
+<div class="modal-overlay" id="enquiryOverlay" role="dialog" aria-modal="true" aria-labelledby="enquiryTitle"><div class="form-modal" style="max-width:480px">
+<button class="modal-close" id="enquiryClose" aria-label="Close">&times;</button>
+<div class="form-title" id="enquiryTitle" data-i18n="enquiry.title"></div>
+<div class="enquiry-girl-name" id="enquiryGirlName"></div>
+<div id="eqContactFields">
+<div class="form-row full"><div class="form-group">
+<label class="form-label" for="eqName" data-i18n="enquiry.name"></label>
+<input class="form-input" id="eqName" data-i18n-ph="enquiry.namePh" autocomplete="name">
+</div></div>
+<div class="form-row"><div class="form-group">
+<label class="form-label" for="eqPhone" data-i18n="enquiry.phone"></label>
+<input class="form-input" id="eqPhone" type="tel" data-i18n-ph="enquiry.phonePh" autocomplete="tel">
+</div><div class="form-group">
+<label class="form-label" for="eqEmail" data-i18n="enquiry.email"></label>
+<input class="form-input" id="eqEmail" type="email" data-i18n-ph="enquiry.emailPh" autocomplete="email">
+</div></div>
+</div>
+<div class="form-row"><div class="form-group">
+<label class="form-label" for="eqDate" data-i18n="enquiry.date"></label>
+<input class="form-input" id="eqDate" type="date">
+</div><div class="form-group">
+<label class="form-label" for="eqTime" data-i18n="enquiry.time"></label>
+<input class="form-input" id="eqTime" type="time">
+</div></div>
+<div class="form-row full"><div class="form-group">
+<label class="form-label" data-i18n="enquiry.duration"></label>
+<div class="enquiry-duration-options" id="eqDurationOptions">
+<button type="button" class="enquiry-dur-btn" data-dur="30">30 min</button>
+<button type="button" class="enquiry-dur-btn active" data-dur="45">45 min</button>
+<button type="button" class="enquiry-dur-btn" data-dur="60">60 min</button>
+</div></div></div>
+<div class="form-row full"><div class="form-group">
+<label class="form-label" data-i18n="enquiry.message"></label>
+<textarea class="form-textarea" id="eqMessage" rows="3" data-i18n-ph="enquiry.messagePh"></textarea>
+</div></div>
+<div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true">
+<input id="eqWebsite" type="text" name="website" tabindex="-1" autocomplete="off">
+</div>
+<div class="lf-error" id="eqError" style="margin-bottom:8px"></div>
+<div class="form-actions">
+<button class="btn btn-secondary" id="enquiryCancel" data-i18n="form.cancel"></button>
+<button class="btn btn-primary" id="enquirySubmit" data-i18n="enquiry.submit"></button>
+</div>
+</div></div>
+
+<div class="fab-container" id="fabContainer">
+<button class="fab-toggle" id="fabToggle" aria-label="Contact options" aria-expanded="false"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg></button>
+<div class="fab-menu" id="fabMenu">
+<a href="tel:+61282832130" class="fab-item fab-call" data-label="02 8283 2130"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg></a>
+<a href="tel:+61416020278" class="fab-item fab-call" data-label="0416 020 278"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg></a>
+</div>
+</div>
+
+<footer><p data-i18n="footer.rights"></p><p class="footer-privacy" data-i18n="footer.privacy"></p></footer>
+
+<script src="/js/app.min.js" defer integrity="sha384-Y7gUrhDAq3o+kW2NnBHC7s61Mo198vJav0GT041hGy1Y22ccmpK6ssq3SzD1S3XH"></script>
+<script src="/js/analytics.min.js" defer integrity="sha384-DA+JMT/mMxfSz64hvblDoqU/RtE8XsT5fzNiZD8KJoWwQqFZrJs9sUsD2257bh/Y"></script>
+<div id="cardHoverPreview" class="card-hover-preview"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="modal-overlay" id="bookingEnquiryOverlay" role="dialog" aria-modal="true" aria-labelledby="bkEnqTitle">
+<div class="bk-enq-panel">
+<!-- Screen 1: Time Selection -->
+<div id="bkEnqS1">
+<div class="bk-enq-hd">
+<div class="bk-enq-ginfo"><div class="bk-enq-avatar" id="bkEnqAvatar"></div><div class="bk-enq-gname" id="bkEnqGName"></div></div>
+<div class="bk-enq-title" id="bkEnqTitle">Select Date &amp; Time</div>
+<div class="bk-enq-legend">
+<span class="bk-leg-item"><span class="bk-leg bk-leg-avail"></span>Available</span>
+<span class="bk-leg-item"><span class="bk-leg bk-leg-booked"></span>Booked</span>
+<span class="bk-leg-item"><span class="bk-leg bk-leg-sel"></span>Your selection</span>
+</div>
+</div>
+<div class="bk-enq-grid-wrap" id="bkEnqGrid"></div>
+<div class="bk-enq-dur-bar" id="bkEnqDurBar">
+<button class="bk-enq-dur-btn" data-dur="30" disabled>30 mins</button>
+<button class="bk-enq-dur-btn" data-dur="45" disabled>45 mins</button>
+<button class="bk-enq-dur-btn" data-dur="60" disabled>1 hr</button>
+<button class="bk-enq-dur-btn" data-dur="90" disabled>1 hr 30 mins</button>
+<button class="bk-enq-dur-btn" data-dur="105" disabled>1 hr 45 mins</button>
+<button class="bk-enq-dur-btn" data-dur="120" disabled>2 hrs</button>
+</div>
+<div class="bk-enq-hint">Click a start time, then choose a duration</div>
+<div class="bk-enq-actions">
+<button class="btn btn-secondary" id="bkEnqCancel1">Cancel</button>
+<button class="btn btn-primary" id="bkEnqReview" disabled>Review →</button>
+</div>
+</div>
+<!-- Screen 2: Review -->
+<div id="bkEnqS2" style="display:none">
+<div class="bk-enq-hd">
+<div class="bk-enq-title">Review Request</div>
+</div>
+<div id="bkEnqProfilePane"></div>
+<div id="bkEnqDetailsPane"></div>
+<div class="bk-enq-actions bk-enq-actions-3">
+<button class="btn btn-secondary" id="bkEnqCancel2">Cancel</button>
+<button class="btn btn-ghost" id="bkEnqBack">← Go Back</button>
+<button class="btn btn-primary" id="bkEnqSubmit">Request Booking</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal-overlay" id="adminNewBkPopup" role="dialog" aria-modal="true">
+<div class="admin-bk-panel">
+<button class="modal-close" id="adminNewBkClose" aria-label="Close">&times;</button>
+<div class="admin-bk-title">Create Booking</div>
+<div class="admin-bk-section"><div class="admin-bk-section-hdr">Details</div><div class="admin-bk-info" id="adminNewBkInfo"></div></div>
+<div class="admin-bk-section">
+<div class="admin-bk-section-hdr">Duration</div>
+<div class="bk-enq-dur-bar" id="adminNewBkDurBar">
+<button class="bk-enq-dur-btn" data-dur="30" disabled>30 mins</button>
+<button class="bk-enq-dur-btn" data-dur="45" disabled>45 mins</button>
+<button class="bk-enq-dur-btn" data-dur="60" disabled>1 hr</button>
+<button class="bk-enq-dur-btn" data-dur="90" disabled>1 hr 30 mins</button>
+<button class="bk-enq-dur-btn" data-dur="105" disabled>1 hr 45 mins</button>
+<button class="bk-enq-dur-btn" data-dur="120" disabled>2 hrs</button>
+</div>
+</div>
+<div class="admin-bk-actions">
+<button class="btn btn-outline" id="adminNewBkCancel">Cancel</button>
+<button class="btn btn-success" id="adminNewBkSelectUser" disabled>Select User</button>
+</div>
+</div>
+</div>
+<div class="modal-overlay" id="adminUserSelectPopup" role="dialog" aria-modal="true">
+<div class="admin-bk-panel">
+<button class="modal-close" id="adminUserSelectClose" aria-label="Close">&times;</button>
+<div class="admin-bk-title">Select User</div>
+<input class="admin-user-search" id="adminUserSearch" type="text" placeholder="Search by name, email or mobile..." autocomplete="off">
+<div class="admin-user-list" id="adminUserList"></div>
+</div>
+</div>
+<div class="modal-overlay" id="adminBkPopup" role="dialog" aria-modal="true">
+<div class="admin-bk-panel">
+<button class="modal-close" id="adminBkClose" aria-label="Close">&times;</button>
+<div class="admin-bk-title">Booking Request</div>
+<div class="admin-bk-section"><div class="admin-bk-section-hdr">Member</div><div class="admin-bk-info" id="adminBkUserInfo"></div></div>
+<div class="admin-bk-section"><div class="admin-bk-section-hdr">Booking Details</div><div class="admin-bk-info" id="adminBkBookingInfo"></div></div>
+<div class="admin-bk-edit-section" id="adminBkEditSection" style="display:none">
+<div class="admin-bk-section-hdr">Edit Booking</div>
+<div class="admin-bk-edit-fields">
+<div class="admin-bk-edit-row"><label class="admin-bk-label">Start</label><select id="adminBkEditStart" class="admin-bk-input"></select></div>
+<div class="admin-bk-edit-row"><label class="admin-bk-label">Duration</label><select id="adminBkEditDur" class="admin-bk-input"><option value="30">30 mins</option><option value="45">45 mins</option><option value="60">1 hr</option><option value="90">1 hr 30 mins</option><option value="105">1 hr 45 mins</option><option value="120">2 hrs</option></select></div>
+</div>
+</div>
+<div class="admin-bk-actions" id="adminBkActionsPending" style="display:none">
+<button class="btn btn-danger" id="adminBkReject">Reject</button>
+<button class="btn btn-success" id="adminBkApprove">Approve</button>
+</div>
+<div class="admin-bk-actions" id="adminBkActionsApproved" style="display:none">
+<button class="btn btn-danger" id="adminBkRejectApproved">Reject</button>
+<button class="btn btn-success" id="adminBkEdit" disabled>Edit</button>
+</div>
+</div>
+</div>
+</body>
+</html>

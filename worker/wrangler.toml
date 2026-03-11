@@ -1,0 +1,9 @@
+name = "github-proxy"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+[triggers]
+crons = ["0 21 * * *"]  # 21:00 UTC = 8:00 AM AEDT
+
+# Secrets (set via dashboard or `wrangler secret put`):
+#   GITHUB_TOKEN        - GitHub personal access token

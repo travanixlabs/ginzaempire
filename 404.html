@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirecting – Ginza Empire</title>
+<script>
+  // GitHub Pages SPA redirect:
+  // Preserve the path+query so the main app can resolve it via pushState.
+  // Encodes the path into a query parameter and redirects to root.
+  var pathSegmentsToKeep = 0; // 0 for user/org pages, 1 for project pages
+  var loc = window.location;
+  var repo = loc.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/');
+  var path = loc.pathname.slice(repo.length);
+  loc.replace(
+    loc.origin + repo + '/?_sp=' + encodeURIComponent(path + loc.search) + loc.hash
+  );
+</script>
+</head>
+<body>
+  <p>Redirecting&hellip;</p>
+</body>
+</html>

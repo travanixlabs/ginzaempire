@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "test": "node --test test/*.test.js",
+    "dev": "echo 'Serve index-dev.html for unminified development'"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2"
+  }
+}

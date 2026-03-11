@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - name: Verify build artifacts committed
+        run: |
+          if ! git diff --quiet js/app.min.js js/admin.min.js styles.min.css; then
+            echo "::error::Build out of sync. Run 'npm run build' and commit."
+            exit 1
+          fi
+      - name: Verify SRI hashes
+        run: |
+          for f in js/app.min.js js/analytics.min.js styles.min.css; do
+            HASH=$(openssl dgst -sha384 -binary "$f" | openssl base64 -A)
+            grep -q "sha384-$HASH" index.html || { echo "::error::SRI mismatch for $f"; exit 1; }
+          done
