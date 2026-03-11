@@ -1,6 +1,7 @@
-const CACHE = 'ginza-v4';
-const SHELL = ['/', '/index.html', '/404.html', '/styles.min.css',
-  '/js/app.min.js', '/js/admin.min.js', '/js/analytics.min.js', '/fav-icon.png',
+const CACHE = 'ginza-v5';
+const SHELL = ['/', '/index.html', '/404.html', '/styles.css',
+  '/js/core.js', '/js/ui.js', '/js/grids.js', '/js/forms.js',
+  '/js/i18n.js', '/js/analytics.js', '/js/controls.js', '/fav-icon.png',
   '/fonts/orbitron-var-latin.woff2',
   '/fonts/rajdhani-400-latin.woff2',
   '/fonts/rajdhani-500-latin.woff2',
