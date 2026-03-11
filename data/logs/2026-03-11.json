@@ -693,5 +693,22 @@
     "screen": "2560x1440",
     "viewport": "1731x1305",
     "siteLang": "en"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmlqrxyr_17pss3h5",
+    "timestamp": "2026-03-11T08:01:39.939Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/",
+    "referrer": "https://sydneyginza.github.io/roster/card",
+    "screen": "2560x1440",
+    "viewport": "1731x1305",
+    "siteLang": "en"
   }
 ]
