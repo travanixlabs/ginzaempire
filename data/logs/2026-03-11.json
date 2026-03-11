@@ -174,5 +174,11 @@
     "screen": "360x910",
     "viewport": "360x780",
     "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlha01r_c4gijh4e",
+    "timestamp": "2026-03-11T03:27:16.301Z",
+    "page": "home"
   }
 ]
