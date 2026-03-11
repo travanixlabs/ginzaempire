@@ -102,7 +102,8 @@ async function generateSitemap(env) {
   const base = 'https://sydneyginza.github.io';
   const pages = [
     { loc: '/',           freq: 'daily',   pri: '1.0' },
-    { loc: '/roster',     freq: 'daily',   pri: '0.9' },
+    { loc: '/roster/card',   freq: 'daily',   pri: '0.9' },
+    { loc: '/roster/weekly', freq: 'daily',   pri: '0.8' },
     { loc: '/girls',      freq: 'daily',   pri: '0.9' },
     { loc: '/rates',      freq: 'weekly',  pri: '0.7' },
     { loc: '/employment', freq: 'monthly', pri: '0.5' },

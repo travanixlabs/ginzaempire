@@ -125,7 +125,7 @@ if(rosterViewMode!=='weekly'){const _tabDates=availDates.includes(ts)?availDates
 const vt=document.createElement('div');vt.className='roster-view-toggle';
 vt.innerHTML=rosterViewMode==='grid'?`<button class="roster-view-btn" data-view="weekly" title="Weekly view"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg></button>`:`<button class="roster-view-btn" data-view="grid" title="Card view"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 3h7v7H3V3zm11 0h7v7h-7V3zM3 14h7v7H3v-7zm11 0h7v7h-7v-7z"/></svg></button>`;
 fb.appendChild(vt);
-setTimeout(()=>{vt.querySelectorAll('.roster-view-btn').forEach(btn=>{btn.onclick=()=>{rosterViewMode=btn.dataset.view;renderRosterFilters();renderRosterGrid()}})},0);
+setTimeout(()=>{vt.querySelectorAll('.roster-view-btn').forEach(btn=>{btn.onclick=()=>{rosterViewMode=btn.dataset.view;Router.replace('/roster/'+(rosterViewMode==='weekly'?'weekly':'card'));renderRosterFilters();renderRosterGrid()}})},0);
 
 /* Available Now / Today quick-filters — only in card view */
 if(rosterViewMode!=='weekly'){renderAvailNowBar()}else{const bar=document.getElementById('rosterAvailBar');if(bar){bar.innerHTML='';bar.style.display='none'}}}

@@ -289,7 +289,7 @@ const titleMap={homePage:'Ginza Empire',rosterPage:'Ginza Empire – Roster',lis
 const pageTitle=titleMap[id]||'Ginza Empire';
 document.title=pageTitle;
 announce(pageTitle.replace('Ginza Empire – ','').replace('Ginza Empire','Home'));
-Router.push(Router.pathForPage(id),pageTitle);
+if(id==='rosterPage'){const rvm=typeof rosterViewMode!=='undefined'?rosterViewMode:'grid';Router.push('/roster/'+(rvm==='weekly'?'weekly':'card'),pageTitle)}else{Router.push(Router.pathForPage(id),pageTitle)}
 /* Shared filter pane is active for all pages */
 _activeFilterPaneId='sharedFilterPane';
 document.querySelectorAll('.nav-dropdown a').forEach(a=>a.classList.remove('active'));

@@ -832,6 +832,17 @@ const Router = (function() {
       return true;
     }
 
+    /* Roster view deep link: /roster/card or /roster/weekly */
+    const rosterMatch = path.match(/^\/roster\/(card|weekly)$/);
+    if (rosterMatch) {
+      const view = rosterMatch[1];
+      rosterViewMode = view === 'weekly' ? 'weekly' : 'grid';
+      _suppressPush = true;
+      showPage('rosterPage');
+      _suppressPush = false;
+      return true;
+    }
+
     /* Standard pages */
     const pageId = PATH_TO_PAGE[path];
     if (pageId) {
@@ -875,6 +886,14 @@ const Router = (function() {
         showPage('homePage');
         _suppressPush = false;
         replace('/', 'Ginza Empire');
+        return true;
+      }
+      if (pageId === 'rosterPage') {
+        rosterViewMode = 'grid';
+        _suppressPush = true;
+        showPage('rosterPage');
+        _suppressPush = false;
+        replace('/roster/card', 'Ginza Empire – Roster');
         return true;
       }
       _suppressPush = true;
