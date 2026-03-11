@@ -399,5 +399,28 @@
     "uuid": "v_mmlhlm3t_ufamhoau",
     "timestamp": "2026-03-11T06:05:30.957Z",
     "page": "roster"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlhl8yu_trfw2ana",
+    "timestamp": "2026-03-11T03:53:24.014Z",
+    "page": "roster"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmlhl8yu_trfw2ana",
+    "timestamp": "2026-03-11T06:11:33.671Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "2560x1440",
+    "viewport": "2560x1305",
+    "siteLang": "en"
   }
 ]
