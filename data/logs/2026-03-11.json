@@ -1699,5 +1699,11 @@
     "uuid": "v_mmlqrxyr_17pss3h5",
     "timestamp": "2026-03-11T11:17:50.384Z",
     "profile": "Vanilla"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlqtplr_6mdfy2au",
+    "timestamp": "2026-03-11T11:18:44.392Z",
+    "page": "bookings"
   }
 ]
