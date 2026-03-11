@@ -861,5 +861,11 @@
     "uuid": "v_mmlqrxyr_17pss3h5",
     "timestamp": "2026-03-11T10:03:47.228Z",
     "page": "calendar"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlqrxyr_17pss3h5",
+    "timestamp": "2026-03-11T10:04:17.992Z",
+    "page": "vacation"
   }
 ]
