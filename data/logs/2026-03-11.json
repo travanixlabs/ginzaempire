@@ -2067,5 +2067,45 @@
     "uuid": "v_mmlqrxyr_17pss3h5",
     "timestamp": "2026-03-11T11:47:46.360Z",
     "profile": "Vanilla"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmlqtplr_6mdfy2au",
+    "timestamp": "2026-03-11T11:42:40.859Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/profile-database",
+    "referrer": "direct",
+    "screen": "2560x1440",
+    "viewport": "2560x1305",
+    "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmlqtplr_6mdfy2au",
+    "timestamp": "2026-03-11T11:42:41.736Z",
+    "page": "profileDb"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmlqtplr_6mdfy2au",
+    "timestamp": "2026-03-11T11:47:53.820Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/profile-database",
+    "referrer": "direct",
+    "screen": "2560x1440",
+    "viewport": "2560x1305",
+    "siteLang": "en"
   }
 ]
