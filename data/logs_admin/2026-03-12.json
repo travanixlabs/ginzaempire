@@ -23,5 +23,11 @@
     "action": "user_status_change",
     "target": "member",
     "newStatus": "approved"
+  },
+  {
+    "ts": "2026-03-12T11:08:13.383Z",
+    "admin": "Owner",
+    "action": "user_delete",
+    "target": "MEMBER"
   }
 ]
