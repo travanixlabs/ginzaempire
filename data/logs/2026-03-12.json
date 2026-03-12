@@ -1499,5 +1499,11 @@
     "uuid": "v_mmn5wfky_v83p406o",
     "timestamp": "2026-03-12T10:58:53.245Z",
     "page": "home"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:59:12.344Z",
+    "page": "myProfile"
   }
 ]
