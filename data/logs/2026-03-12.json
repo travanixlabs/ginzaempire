@@ -651,5 +651,11 @@
     "uuid": "v_mmn84unb_a7p4t17a",
     "timestamp": "2026-03-12T08:59:27.683Z",
     "profile": "Sora"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn84unb_a7p4t17a",
+    "timestamp": "2026-03-12T08:59:30.641Z",
+    "page": "home"
   }
 ]
