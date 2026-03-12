@@ -1236,5 +1236,11 @@
     "uuid": "v_mmn5wfky_v83p406o",
     "timestamp": "2026-03-12T10:24:48.258Z",
     "page": "calendar"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:25:07.999Z",
+    "page": "home"
   }
 ]
