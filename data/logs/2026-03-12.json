@@ -100,5 +100,22 @@
     "screen": "2560x1440",
     "viewport": "2560x1305",
     "siteLang": "en"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmn1fst9_i9d17he5",
+    "timestamp": "2026-03-12T05:39:20.349Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.7680.71 Safari/537.36 Edge/18.19582",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "America/Los_Angeles",
+    "tzOffset": 420,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "800x600",
+    "viewport": "1366x768",
+    "siteLang": "en"
   }
 ]
