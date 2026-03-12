@@ -374,6 +374,8 @@ Router.resolve();
 }else{
 /* On home — just set the initial history state */
 history.replaceState({path:'/'},'Ginza Empire','/');
+renderFilterPane('sharedFilterPane');
+updateFilterToggle();
 }
 }
 
