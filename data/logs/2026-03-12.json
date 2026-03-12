@@ -1300,5 +1300,210 @@
     "uuid": "v_mmn8tmjr_nph0o8ss",
     "timestamp": "2026-03-12T10:32:19.064Z",
     "page": "list"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmn8tmjr_nph0o8ss",
+    "timestamp": "2026-03-12T10:39:30.907Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/girls",
+    "referrer": "https://ginzaempire.com/girls",
+    "screen": "2560x1440",
+    "viewport": "2560x1305",
+    "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn8tmjr_nph0o8ss",
+    "timestamp": "2026-03-12T10:39:31.544Z",
+    "page": "list"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn8tmjr_nph0o8ss",
+    "timestamp": "2026-03-12T10:39:33.089Z",
+    "page": "home"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmncc5hg_de0eduwq",
+    "timestamp": "2026-03-12T10:44:25.925Z",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Linux",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Europe/Rome",
+    "tzOffset": -60,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "1920x1080",
+    "viewport": "1920x1080",
+    "siteLang": "en"
+  },
+  {
+    "type": "profileView",
+    "uuid": "v_mmn8tmjr_nph0o8ss",
+    "timestamp": "2026-03-12T10:52:02.330Z",
+    "profile": "Umi"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn8tmjr_nph0o8ss",
+    "timestamp": "2026-03-12T10:52:21.267Z",
+    "page": "home"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn8tmjr_nph0o8ss",
+    "timestamp": "2026-03-12T10:52:37.309Z",
+    "page": "list"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn8tmjr_nph0o8ss",
+    "timestamp": "2026-03-12T10:52:39.711Z",
+    "page": "roster"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn8tmjr_nph0o8ss",
+    "timestamp": "2026-03-12T10:52:42.950Z",
+    "page": "home"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:55:10.162Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "2560x1440",
+    "viewport": "2560x1305",
+    "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:55:16.391Z",
+    "page": "roster"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:55:18.917Z",
+    "page": "home"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:55:29.994Z",
+    "page": "roster"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:55:35.181Z",
+    "page": "list"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:55:40.685Z",
+    "page": "home"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:58:23.355Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "2560x1440",
+    "viewport": "2560x1305",
+    "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:58:27.934Z",
+    "page": "roster"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:58:29.131Z",
+    "page": "home"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:58:30.206Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "2560x1440",
+    "viewport": "2560x1305",
+    "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:58:33.550Z",
+    "page": "roster"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:58:34.894Z",
+    "page": "home"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:58:45.469Z",
+    "page": "roster"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:58:47.474Z",
+    "page": "list"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:58:53.245Z",
+    "page": "home"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:59:12.344Z",
+    "page": "myProfile"
   }
 ]
