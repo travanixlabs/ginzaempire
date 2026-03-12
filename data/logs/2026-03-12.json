@@ -1074,5 +1074,11 @@
     "uuid": "v_mmn5wfky_v83p406o",
     "timestamp": "2026-03-12T09:38:38.484Z",
     "profile": "Umi"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T09:38:54.479Z",
+    "page": "roster"
   }
 ]
