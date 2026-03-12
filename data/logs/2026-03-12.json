@@ -841,5 +841,11 @@
     "uuid": "v_mmn5wfky_v83p406o",
     "timestamp": "2026-03-12T09:06:20.167Z",
     "page": "home"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T09:06:22.491Z",
+    "page": "roster"
   }
 ]
