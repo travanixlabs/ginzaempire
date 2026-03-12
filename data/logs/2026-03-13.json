@@ -15,5 +15,22 @@
     "screen": "1920x1080",
     "viewport": "1280x653",
     "siteLang": "en"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmnxfg6q_oa35149f",
+    "timestamp": "2026-03-12T20:34:51.698Z",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1",
+    "browser": "Safari",
+    "os": "macOS",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "UTC",
+    "tzOffset": 0,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "428x926",
+    "viewport": "428x926",
+    "siteLang": "en"
   }
 ]
