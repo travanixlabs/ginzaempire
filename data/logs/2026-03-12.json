@@ -748,5 +748,17 @@
     "uuid": "v_mmn5wfky_v83p406o",
     "timestamp": "2026-03-12T09:02:33.154Z",
     "page": "roster"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T09:03:02.186Z",
+    "page": "list"
+  },
+  {
+    "type": "profileView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T09:03:03.787Z",
+    "profile": "Akemi"
   }
 ]
