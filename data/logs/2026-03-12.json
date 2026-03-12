@@ -1370,5 +1370,11 @@
     "uuid": "v_mmn8tmjr_nph0o8ss",
     "timestamp": "2026-03-12T10:52:39.711Z",
     "page": "roster"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn8tmjr_nph0o8ss",
+    "timestamp": "2026-03-12T10:52:42.950Z",
+    "page": "home"
   }
 ]
