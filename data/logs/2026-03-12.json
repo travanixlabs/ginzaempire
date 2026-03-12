@@ -117,5 +117,22 @@
     "screen": "800x600",
     "viewport": "1366x768",
     "siteLang": "en"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmn1g19e_l3zzveji",
+    "timestamp": "2026-03-12T05:39:31.298Z",
+    "userAgent": "Mozilla/5.0 (Linux; Android 8.0.0; SM-G965U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.7680.71 Mobile Safari/537.36",
+    "browser": "Chrome",
+    "os": "Android",
+    "device": "Mobile",
+    "language": "en-US",
+    "timezone": "America/Los_Angeles",
+    "tzOffset": 420,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "320x658",
+    "viewport": "320x658",
+    "siteLang": "en"
   }
 ]
