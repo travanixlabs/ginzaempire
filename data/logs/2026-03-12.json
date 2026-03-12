@@ -289,5 +289,22 @@
     "uuid": "v_mmn3msvu_usmzsa9z",
     "timestamp": "2026-03-12T07:04:13.566Z",
     "page": "home"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmn5mibf_c31u6q89",
+    "timestamp": "2026-03-12T07:36:31.803Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "UTC",
+    "tzOffset": 0,
+    "page": "/ginzaempire/",
+    "referrer": "direct",
+    "screen": "800x600",
+    "viewport": "1600x1200",
+    "siteLang": "en"
   }
 ]
