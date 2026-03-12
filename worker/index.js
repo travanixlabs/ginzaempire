@@ -406,10 +406,23 @@ async function scrapeGirlProfile(id) {
     val1 = p[0] || ''; val2 = p[1] || ''; val3 = p[2] || '';
   }
 
-  // Height from profile page (may not be on listing card)
-  const htMatch = html.match(/Height:?\s*<\/(?:label|dt)>\s*<dd>\s*(\d+)/i)
-               || html.match(/Height:\s*(\d+)/i);
+  // Height from profile page <dd> tag
+  const htMatch = html.match(/Height:?\s*<\/(?:label|dt)>\s*<dd>\s*(1[3-9]\d|20\d)/i)
+               || html.match(/Height:<\/label>\s*(1[3-9]\d|20\d)/i);
   const profileHeight = htMatch ? htMatch[1] : '';
+
+  // Type: <label>Type:</label>Natural busty, very friendly
+  const typeMatch = html.match(/Type:<\/label>\s*([^<]+)/i);
+  const profileType = typeMatch ? typeMatch[1].replace(/&nbsp;/g, ' ').trim() : '';
+
+  // Language: <label>Language:</label>Japanese, Limited English
+  const langMatch = html.match(/Language:<\/label>\s*([^<]+)/i);
+  const profileLang = langMatch ? langMatch[1].replace(/&nbsp;/g, ' ').trim() : '';
+
+  // Speciality (maps to exp): <label>Speciality:</label>Inexperienced
+  const expMatch = html.match(/Speciality:<\/label>\s*([^<]+)/i)
+                || html.match(/Experience:<\/label>\s*([^<]+)/i);
+  const profileExp = expMatch ? expMatch[1].replace(/&nbsp;/g, ' ').trim() : '';
 
   // Full-size images: <a href="/data/upload/...jpeg"> (skip thumbnails ending in 's.jpeg')
   const imgRe = /<a[^>]+href="(\/data\/upload\/[^"]+\.\w+)"[^>]*>/gi;
@@ -446,7 +459,7 @@ async function scrapeGirlProfile(id) {
     }
   }
 
-  return { val1, val2, val3, images, desc, profileHeight };
+  return { val1, val2, val3, images, desc, profileHeight, profileType, profileLang, profileExp };
 }
 
 /**
@@ -549,13 +562,11 @@ async function syncNewGirls(env) {
         val3: profile.val3 || undefined,
       };
       if (card.special) entry.special = card.special;
-      entry.exp = 'Inexperienced';
+      entry.exp = profile.profileExp || 'Inexperienced';
       entry.startDate = todayStr;
-      if (card.country.length) {
-        entry.lang = LANG_FROM_COUNTRY[card.country[0]] || '';
-      }
+      entry.lang = profile.profileLang || (card.country.length ? LANG_FROM_COUNTRY[card.country[0]] || '' : '');
       entry.oldUrl = `https://479ginza.com.au/Girls/${card.id}`;
-      entry.type = '';
+      entry.type = profile.profileType || '';
       entry.desc = profile.desc || '';
       entry.photos = photos;
       entry.labels = extractLabels(profile.desc);
