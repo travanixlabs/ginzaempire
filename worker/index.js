@@ -396,13 +396,20 @@ async function scrapeGirlProfile(id) {
   if (!resp.ok) throw new Error(`Profile fetch ${resp.status} for /Girls/${id}`);
   const html = await resp.text();
 
-  // Booking: "180.250.290" or "180/250/290"
-  const bk = html.match(/Booking:<\/label>\s*([\d.\/]+)/);
+  // Booking: "170,230,270" or "180.250.290" — may use <dd>, <label>, or plain text
+  const bk = html.match(/Booking:?\s*<\/(?:label|dt)>\s*<dd>\s*([\d,.\/ ]+)/i)
+          || html.match(/Booking:<\/label>\s*([\d,.\/ ]+)/i)
+          || html.match(/Booking:\s*([\d,.\/ ]+)/i);
   let val1 = '', val2 = '', val3 = '';
   if (bk) {
-    const p = bk[1].split(/[.\/]/);
+    const p = bk[1].trim().split(/[,.\/ ]+/);
     val1 = p[0] || ''; val2 = p[1] || ''; val3 = p[2] || '';
   }
+
+  // Height from profile page (may not be on listing card)
+  const htMatch = html.match(/Height:?\s*<\/(?:label|dt)>\s*<dd>\s*(\d+)/i)
+               || html.match(/Height:\s*(\d+)/i);
+  const profileHeight = htMatch ? htMatch[1] : '';
 
   // Full-size images: <a href="/data/upload/...jpeg"> (skip thumbnails ending in 's.jpeg')
   const imgRe = /<a[^>]+href="(\/data\/upload\/[^"]+\.\w+)"[^>]*>/gi;
@@ -439,7 +446,7 @@ async function scrapeGirlProfile(id) {
     }
   }
 
-  return { val1, val2, val3, images, desc };
+  return { val1, val2, val3, images, desc, profileHeight };
 }
 
 /**
@@ -535,7 +542,7 @@ async function syncNewGirls(env) {
         country: card.country.length ? card.country : undefined,
         age: card.age || undefined,
         body: card.body || undefined,
-        height: card.height || undefined,
+        height: card.height || profile.profileHeight || undefined,
         cup: card.cup || undefined,
         val1: profile.val1 || undefined,
         val2: profile.val2 || undefined,
