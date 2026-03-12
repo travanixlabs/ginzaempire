@@ -301,5 +301,22 @@
     "screen": "1600x1200",
     "viewport": "1600x1200",
     "siteLang": "en"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmng0xba_9war63zd",
+    "timestamp": "2026-03-12T12:27:40.593Z",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "macOS",
+    "device": "Desktop",
+    "language": "en-US@posix",
+    "timezone": "UTC",
+    "tzOffset": 0,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "1600x1200",
+    "viewport": "1600x1200",
+    "siteLang": "en"
   }
 ]
