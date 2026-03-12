@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://travanixlabs.github.io/ginzaempire/sitemap.xml
+Sitemap: https://ginzaempire.com/sitemap.xml

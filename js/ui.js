@@ -556,7 +556,7 @@ const activeCard=strip.querySelector('.pnav-card.active');if(activeCard)setTimeo
 /* OG / Twitter Meta Tag helpers */
 function updateOgMeta(g,idx){
 const set=(prop,val,attr)=>{attr=attr||'property';let el=document.querySelector('meta['+attr+'="'+prop+'"]');if(!el){el=document.createElement('meta');el.setAttribute(attr,prop);document.head.appendChild(el)}el.setAttribute('content',val)};
-const url='https://travanixlabs.github.io/ginzaempire'+Router.pathForProfile(idx);
+const url='https://ginzaempire.com'+Router.pathForProfile(idx);
 const img=g.photos&&g.photos.length?g.photos[0]:'https://raw.githubusercontent.com/travanixlabs/ginzaempire/main/Images/Homepage/Homepage_1.jpg';
 const country=Array.isArray(g.country)?g.country.join('/'):(g.country||'');
 const parts=[country,g.age?'Age '+g.age:'',g.body?'Body '+g.body:'',g.height?g.height+' cm':'',g.cup?g.cup+' cup':'',g.val3?'From '+g.val3+'/hr':'',g.exp||''].filter(Boolean);
@@ -568,10 +568,10 @@ set('description',desc,'name');
 let canon=document.querySelector('link[rel="canonical"]');if(!canon){canon=document.createElement('link');canon.rel='canonical';document.head.appendChild(canon)}canon.href=url}
 function updateProfileJsonLd(g,idx){
 let el=document.getElementById('profileLd');if(!el){el=document.createElement('script');el.type='application/ld+json';el.id='profileLd';document.head.appendChild(el)}
-const url='https://travanixlabs.github.io/ginzaempire'+Router.pathForProfile(idx);
+const url='https://ginzaempire.com'+Router.pathForProfile(idx);
 const img=g.photos&&g.photos.length?g.photos[0]:'';
 const country=Array.isArray(g.country)?g.country[0]:(g.country||'');
-const person={"@type":"Person","name":g.name||'','worksFor':{"@id":"https://travanixlabs.github.io/ginzaempire/#empire"}};
+const person={"@type":"Person","name":g.name||'','worksFor':{"@id":"https://ginzaempire.com/#empire"}};
 if(img)person.image=g.photos.length>1?g.photos:img;
 if(country)person.nationality=country;
 if(g.desc)person.description=g.desc.replace(/<[^>]*>/g,'').substring(0,300);
@@ -587,16 +587,16 @@ const ld={"@context":"https://schema.org","@type":"ProfilePage","url":url,"mainE
 if(rvs.length){const avg=rvs.reduce((s,r)=>s+r.rating,0)/rvs.length;ld.mainEntity.aggregateRating={"@type":"AggregateRating","ratingValue":avg.toFixed(1),"bestRating":"5","ratingCount":rvs.length}}
 el.textContent=JSON.stringify(ld);
 /* Update breadcrumb */
-if(typeof updateBreadcrumb==='function')updateBreadcrumb([{name:'Home',url:'https://travanixlabs.github.io/ginzaempire/'},{name:'Girls',url:'https://travanixlabs.github.io/ginzaempire/girls'},{name:g.name||'Profile',url:url}])}
+if(typeof updateBreadcrumb==='function')updateBreadcrumb([{name:'Home',url:'https://ginzaempire.com/'},{name:'Girls',url:'https://ginzaempire.com/girls'},{name:g.name||'Profile',url:url}])}
 function resetOgMeta(){
 const set=(prop,val,attr)=>{attr=attr||'property';const el=document.querySelector('meta['+attr+'="'+prop+'"]');if(el)el.setAttribute('content',val)};
 const t='Ginza Empire \u2013 Sydney\'s Premier Asian Bordello';
 const d='Sydney\'s premier Asian bordello in Surry Hills. Browse our roster of stunning girls, check live availability, and view rates. Open daily 10:30am\u20131am at 310 Cleveland St.';
 const i='https://raw.githubusercontent.com/travanixlabs/ginzaempire/main/Images/Homepage/Homepage_1.jpg';
-set('og:title',t);set('og:description',d);set('og:url','https://travanixlabs.github.io/ginzaempire');set('og:image',i);
+set('og:title',t);set('og:description',d);set('og:url','https://ginzaempire.com');set('og:image',i);
 set('twitter:title',t,'name');set('twitter:description',d,'name');set('twitter:image',i,'name');
 set('description',d,'name');
-const canon=document.querySelector('link[rel="canonical"]');if(canon)canon.href='https://travanixlabs.github.io/ginzaempire';
+const canon=document.querySelector('link[rel="canonical"]');if(canon)canon.href='https://ginzaempire.com';
 const pld=document.getElementById('profileLd');if(pld)pld.remove();
 if(typeof updateBreadcrumb==='function')updateBreadcrumb(null)}
 

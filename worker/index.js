@@ -6,6 +6,8 @@
  */
 
 const ALLOWED_ORIGINS = [
+  'https://ginzaempire.com',
+  'https://www.ginzaempire.com',
   'https://travanixlabs.github.io',
   'http://localhost:3000',
   'http://127.0.0.1:5500',
