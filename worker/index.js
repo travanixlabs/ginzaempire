@@ -9,6 +9,7 @@ const ALLOWED_ORIGINS = [
   'https://travanixlabs.github.io',
   'http://localhost:3000',
   'http://127.0.0.1:5500',
+  'http://127.0.0.1:5501',
 ];
 
 const REPO = 'travanixlabs/ginzaempire';

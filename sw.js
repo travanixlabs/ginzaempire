@@ -1,5 +1,6 @@
-const CACHE = 'ginza-v6';
-const BP = '/ginzaempire';
+const CACHE = 'ginza-v7';
+/* Derive base path from where sw.js is served — works for both localhost and GitHub Pages */
+const BP = new URL('./', self.location).pathname.replace(/\/$/, '');
 const SHELL = [BP + '/', BP + '/index.html', BP + '/404.html', BP + '/styles.css',
   BP + '/js/core.js', BP + '/js/ui.js', BP + '/js/grids.js', BP + '/js/forms.js',
   BP + '/js/i18n.js', BP + '/js/analytics.js', BP + '/js/controls.js', BP + '/fav-icon.png',
@@ -42,7 +43,7 @@ self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
 
   /* Font files → cache-first (immutable content-hashed files) */
-  if (url.pathname.startsWith(BP + '/fonts/')) {
+  if (url.pathname.startsWith(BP + '/fonts/') || url.pathname.startsWith('/fonts/')) {
     e.respondWith(
       caches.open(CACHE).then(async c => {
         const cached = await c.match(e.request);

@@ -91,7 +91,7 @@ async function build() {
   for (const [file, hash] of Object.entries(hashes)) {
     const escaped = file.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     // Match integrity attribute on tags referencing this file
-    const re = new RegExp(`((?:href|src)="/ginzaempire/(?:${escaped})"[^>]*?)integrity="sha384-[^"]*"`, 'g');
+    const re = new RegExp(`((?:href|src)="\\./(?:${escaped})"[^>]*?)integrity="sha384-[^"]*"`, 'g');
     html = html.replace(re, `$1integrity="${hash}"`);
   }
   fs.writeFileSync('index.html', html, 'utf8');

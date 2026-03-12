@@ -4,7 +4,7 @@ const PROXY = 'https://github-proxy.sydneyginza-api-2.workers.dev';
 const REPO = 'travanixlabs/ginzaempire';
 const DATA_REPO = REPO;
 const SITE_REPO = REPO;
-const BASE_PATH = '/ginzaempire';
+const BASE_PATH = location.hostname === 'travanixlabs.github.io' ? '/ginzaempire' : '';
 const DATA_API = `${PROXY}/repos/${DATA_REPO}/contents`;
 const SITE_API = `${PROXY}/repos/${SITE_REPO}/contents`;
 
