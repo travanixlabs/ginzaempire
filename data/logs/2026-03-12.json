@@ -438,5 +438,11 @@
     "uuid": "v_mmn62d1d_t3t01nia",
     "timestamp": "2026-03-12T07:48:52.204Z",
     "page": "home"
+  },
+  {
+    "type": "profileView",
+    "uuid": "v_mmn62d1d_t3t01nia",
+    "timestamp": "2026-03-12T07:49:06.739Z",
+    "profile": "Darin"
   }
 ]
