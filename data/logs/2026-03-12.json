@@ -502,5 +502,11 @@
     "uuid": "v_mmn3msvu_usmzsa9z",
     "timestamp": "2026-03-12T08:31:07.313Z",
     "page": "calendar"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn3msvu_usmzsa9z",
+    "timestamp": "2026-03-12T08:31:31.173Z",
+    "page": "home"
   }
 ]
