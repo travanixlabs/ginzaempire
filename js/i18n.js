@@ -23,7 +23,6 @@ const LANG_DICT = {
     'bnav.girls':'Browse',
     'bnav.favs':'Favs',
     /* Home page */
-    'home.tagline':"Sydney's Premier Experience",
     'home.announcement':'Announcement',
     'home.newGirls':'New Girls',
     'home.location':'Location',
@@ -517,7 +516,6 @@ const LANG_DICT = {
     'bnav.girls':'一覧',
     'bnav.favs':'お気に入り',
     /* Home page */
-    'home.tagline':'シドニー最高のエクスペリエンス',
     'home.announcement':'お知らせ',
     'home.newGirls':'新しい女の子',
     'home.location':'場所',
@@ -1011,7 +1009,6 @@ const LANG_DICT = {
     'bnav.girls':'둘러보기',
     'bnav.favs':'즐겨찾기',
     /* Home page */
-    'home.tagline':'시드니 최고의 경험',
     'home.announcement':'공지사항',
     'home.newGirls':'신규 여성',
     'home.location':'위치',
@@ -1501,7 +1498,6 @@ const LANG_DICT = {
     'bnav.girls':'浏览',
     'bnav.favs':'收藏',
     /* Home page */
-    'home.tagline':'悉尼顶级体验',
     'home.announcement':'公告',
     'home.newGirls':'新女生',
     'home.location':'地点',

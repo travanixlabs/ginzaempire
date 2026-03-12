@@ -530,7 +530,6 @@ footer p{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--
 .home-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:100vw;height:500px;background:linear-gradient(180deg,rgba(180,74,255,0.08) 0%,rgba(201,149,44,0.05) 30%,transparent 100%);pointer-events:none;z-index:-1}
 .home-title{font-family:'Orbitron',sans-serif;font-weight:900;font-size:clamp(36px,5vw,64px);letter-spacing:8px;text-transform:uppercase;margin-bottom:12px;background:linear-gradient(135deg,#c9952c,#f5e6a3,#c9952c,#e1b97e,#f5e6a3,#c9952c);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 4s ease infinite;filter:drop-shadow(0 0 20px rgba(201,149,44,0.4)) drop-shadow(0 0 60px rgba(201,149,44,0.15))}
 .home-title span{-webkit-text-fill-color:transparent}
-.home-tagline{font-family:'Rajdhani',sans-serif;font-size:16px;letter-spacing:4px;text-transform:uppercase;color:var(--text-dim);margin-top:12px;margin-bottom:60px}
 .home-search-wrap{display:flex;justify-content:center;margin-bottom:48px}
 .home-search{position:relative;width:100%;max-width:420px;display:flex;align-items:center}
 .home-search-input{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#fff;font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:500;letter-spacing:2px;padding:14px 50px 14px 20px;outline:none;transition:all .3s;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px))}
