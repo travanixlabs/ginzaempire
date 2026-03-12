@@ -1213,5 +1213,28 @@
     "uuid": "v_mmn8tmjr_nph0o8ss",
     "timestamp": "2026-03-12T10:20:26.604Z",
     "profile": "Umi"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:24:47.207Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/calendar?sortDir=desc",
+    "referrer": "direct",
+    "screen": "2560x1440",
+    "viewport": "2560x1305",
+    "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmn5wfky_v83p406o",
+    "timestamp": "2026-03-12T10:24:48.258Z",
+    "page": "calendar"
   }
 ]
