@@ -1016,7 +1016,7 @@ async function logAdminAction(action,target,meta={}){
 }
 
 /* === Privacy Banner (moved from inline for CSP compliance) === */
-(function(){try{const K='ginza_privacy_seen';if(localStorage.getItem(K))return;const b=document.getElementById('privacyBanner');if(!b)return;b.style.display='flex';const dismiss=()=>{b.style.display='none';try{localStorage.setItem(K,'1')}catch(e){}};document.getElementById('privacyDismissBtn').onclick=dismiss;}catch(e){}})();
+(function(){try{const K='ginza_privacy_seen';if(new URLSearchParams(window.location.search).has('embed'))return;if(localStorage.getItem(K))return;const b=document.getElementById('privacyBanner');if(!b)return;b.style.display='flex';const dismiss=()=>{b.style.display='none';try{localStorage.setItem(K,'1')}catch(e){}};document.getElementById('privacyDismissBtn').onclick=dismiss;}catch(e){}})();
 
 /* === Service Worker Registration === */
 if('serviceWorker' in navigator)navigator.serviceWorker.register(BASE_PATH+'/sw.js');
