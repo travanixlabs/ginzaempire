@@ -220,5 +220,28 @@
     "uuid": "v_mmpic9bf_aamqwqna",
     "timestamp": "2026-03-13T23:08:01.944Z",
     "profile": "Jane"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmpicbsb_mfy7ejs7",
+    "timestamp": "2026-03-13T23:08:04.139Z",
+    "userAgent": "\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36\"",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US@posix",
+    "timezone": "UTC",
+    "tzOffset": 0,
+    "page": "/girls/Mirei",
+    "referrer": "https://ginzaempire.com/girls/Mirei",
+    "screen": "1280x720",
+    "viewport": "1280x720",
+    "siteLang": "en"
+  },
+  {
+    "type": "profileView",
+    "uuid": "v_mmpicbsb_mfy7ejs7",
+    "timestamp": "2026-03-13T23:08:05.169Z",
+    "profile": "Mirei"
   }
 ]
