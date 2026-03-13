@@ -240,9 +240,31 @@ function renderBkEnqReview(){
     </div>`;
 }
 
+function _showBookingDisclaimer(){
+  return new Promise(resolve=>{
+    const overlay=document.createElement('div');
+    overlay.className='modal-overlay';
+    overlay.style.cssText='display:flex;align-items:center;justify-content:center;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,0.7)';
+    overlay.innerHTML=`<div style="background:#13131e;border:1px solid rgba(180,74,255,0.35);padding:32px 28px;max-width:420px;width:90%;font-family:'Rajdhani',sans-serif;text-align:center;box-shadow:0 0 40px rgba(180,74,255,0.15)">
+      <div style="font-size:18px;letter-spacing:2px;color:#fff;margin-bottom:14px;text-transform:uppercase">Notice</div>
+      <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;margin:0 0 22px">This is just a proof of concept. Making a booking here is not official. Please contact Ginza Empire directly.</p>
+      <div style="display:flex;gap:12px;justify-content:center">
+        <button id="_pocCancel" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);color:#fff;font-family:'Rajdhani',sans-serif;font-size:14px;letter-spacing:2px;padding:8px 24px;cursor:pointer;text-transform:uppercase">Cancel</button>
+        <button id="_pocContinue" style="background:rgba(180,74,255,0.18);border:1px solid rgba(180,74,255,0.45);color:#fff;font-family:'Rajdhani',sans-serif;font-size:14px;letter-spacing:2px;padding:8px 24px;cursor:pointer;text-transform:uppercase">I Understand, Continue</button>
+      </div>
+    </div>`;
+    document.body.appendChild(overlay);
+    overlay.querySelector('#_pocCancel').onclick=()=>{overlay.remove();resolve(false)};
+    overlay.querySelector('#_pocContinue').onclick=()=>{overlay.remove();resolve(true)};
+    overlay.onclick=e=>{if(e.target===overlay){overlay.remove();resolve(false)}};
+  });
+}
+
 async function submitBookingRequest(){
   if(_bkEnqSubmitting||!_bkEnqSel)return;
   if(hasActiveFutureBooking()){showToast('You already have an active booking.','error');closeBkEnq();return}
+  const confirmed=await _showBookingDisclaimer();
+  if(!confirmed)return;
   _bkEnqSubmitting=true;
   const btn=document.getElementById('bkEnqSubmit');
   btn.textContent='Sending...';btn.style.pointerEvents='none';
