@@ -275,5 +275,28 @@
     "uuid": "v_mmn5wfky_v83p406o",
     "timestamp": "2026-03-12T23:19:24.920Z",
     "page": "roster"
+  },
+  {
+    "type": "profileView",
+    "uuid": "v_mmn8tmjr_nph0o8ss",
+    "timestamp": "2026-03-12T23:19:04.305Z",
+    "profile": "Hinata"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmn8tmjr_nph0o8ss",
+    "timestamp": "2026-03-13T01:13:16.679Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "2560x1440",
+    "viewport": "2560x1305",
+    "siteLang": "en"
   }
 ]
