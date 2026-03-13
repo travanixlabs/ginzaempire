@@ -1149,5 +1149,17 @@
     "screen": "2560x1440",
     "viewport": "1509x1305",
     "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmo9usvl_tjs1s5q3",
+    "timestamp": "2026-03-13T02:25:41.127Z",
+    "page": "roster"
+  },
+  {
+    "type": "profileView",
+    "uuid": "v_mmo9usvl_tjs1s5q3",
+    "timestamp": "2026-03-13T02:25:42.973Z",
+    "profile": "Amu"
   }
 ]
