@@ -23,5 +23,17 @@
     "status": "rejected",
     "by": "Owner",
     "totalValue": "470"
+  },
+  {
+    "ts": "2026-03-13T03:12:30.807Z",
+    "type": "booking_created",
+    "bookingId": "mmobmt9g40ab8nsrxeb",
+    "user": "Tre",
+    "girlName": "Umi",
+    "date": "2026-03-13",
+    "startMin": 930,
+    "endMin": 1020,
+    "status": "pending",
+    "totalValue": "440"
   }
 ]
