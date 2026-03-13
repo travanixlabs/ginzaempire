@@ -110,18 +110,7 @@
     "2026-03-12",
     "2026-03-13"
   ],
-  "_bookings": [
-    {
-      "id": "mmobmt9g40ab8nsrxeb",
-      "girlName": "Umi",
-      "date": "2026-03-13",
-      "startMin": 930,
-      "endMin": 1020,
-      "user": "Tre",
-      "status": "pending",
-      "ts": "2026-03-13T03:12:29.860Z"
-    }
-  ],
+  "_bookings": [],
   "Chloe": {
     "2026-03-12": {
       "start": "10:30",
