@@ -1836,5 +1836,17 @@
     "uuid": "v_mmo9usvl_tjs1s5q3",
     "timestamp": "2026-03-13T03:18:58.711Z",
     "page": "myProfile"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmo9usvl_tjs1s5q3",
+    "timestamp": "2026-03-13T03:19:53.131Z",
+    "page": "favorites"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmo9usvl_tjs1s5q3",
+    "timestamp": "2026-03-13T03:19:55.095Z",
+    "page": "roster"
   }
 ]
