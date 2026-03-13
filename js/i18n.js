@@ -295,7 +295,7 @@ const LANG_DICT = {
     'privacy.body':'We collect anonymous visit data to understand visitor trends. No personal information is collected or shared.',
     'privacy.btn':'Got It',
     /* Footer */
-    'footer.rights':'Built by <a href="https://travanixlabs.com/" target="_blank" rel="noopener">Travanix Labs</a> as a proof of concept. Not affiliated with, updated, or moderated by the owners of Ginza Empire. Content is automatically updated from the original website. Some features are disabled, such as online bookings, because this is a proof of concept website.',
+    'footer.rights':'Built by <a href="https://travanixlabs.com/" target="_blank" rel="noopener">Travanix Labs</a> as a proof of concept. Not affiliated with, updated, or moderated by the owners of Ginza Empire. Content is automatically updated from the original website. Some features, despite functional, are only proof of concept ~ for example making a booking, is functional but not a "real" booking.',
     'footer.privacy':'This site uses anonymous analytics to understand visitor trends. No personal information is collected or shared with third parties.',
     /* Back to top / compare */
     'ui.backToTop':'Back to Top',
@@ -788,7 +788,7 @@ const LANG_DICT = {
     'privacy.body':'訪問者の傾向を把握するために匿名の訪問データを収集しています。個人情報は収集・共有されません。',
     'privacy.btn':'了解',
     /* Footer */
-    'footer.rights':'Built by <a href="https://travanixlabs.com/" target="_blank" rel="noopener">Travanix Labs</a> as a proof of concept. Not affiliated with, updated, or moderated by the owners of Ginza Empire. Content is automatically updated from the original website. Some features are disabled, such as online bookings, because this is a proof of concept website.',
+    'footer.rights':'Built by <a href="https://travanixlabs.com/" target="_blank" rel="noopener">Travanix Labs</a> as a proof of concept. Not affiliated with, updated, or moderated by the owners of Ginza Empire. Content is automatically updated from the original website. Some features, despite functional, are only proof of concept ~ for example making a booking, is functional but not a "real" booking.',
     'footer.privacy':'当サイトは訪問者の傾向を把握するため匿名のアナリティクスを使用しています。個人情報は収集・第三者に共有されません。',
     /* Back to top / compare */
     'ui.backToTop':'トップへ戻る',
@@ -1281,7 +1281,7 @@ const LANG_DICT = {
     'privacy.body':'방문자 동향을 파악하기 위해 익명 방문 데이터를 수집합니다. 개인정보는 수집하거나 공유하지 않습니다.',
     'privacy.btn':'확인',
     /* Footer */
-    'footer.rights':'Built by <a href="https://travanixlabs.com/" target="_blank" rel="noopener">Travanix Labs</a> as a proof of concept. Not affiliated with, updated, or moderated by the owners of Ginza Empire. Content is automatically updated from the original website. Some features are disabled, such as online bookings, because this is a proof of concept website.',
+    'footer.rights':'Built by <a href="https://travanixlabs.com/" target="_blank" rel="noopener">Travanix Labs</a> as a proof of concept. Not affiliated with, updated, or moderated by the owners of Ginza Empire. Content is automatically updated from the original website. Some features, despite functional, are only proof of concept ~ for example making a booking, is functional but not a "real" booking.',
     'footer.privacy':'이 사이트는 방문자 동향을 파악하기 위해 익명 분석을 사용합니다. 개인정보는 수집하거나 제3자와 공유하지 않습니다.',
     /* Back to top / compare */
     'ui.backToTop':'맨 위로',
@@ -1770,7 +1770,7 @@ const LANG_DICT = {
     'privacy.body':'我们收集匿名访问数据以了解访客趋势。不收集或分享任何个人信息。',
     'privacy.btn':'我知道了',
     /* Footer */
-    'footer.rights':'Built by <a href="https://travanixlabs.com/" target="_blank" rel="noopener">Travanix Labs</a> as a proof of concept. Not affiliated with, updated, or moderated by the owners of Ginza Empire. Content is automatically updated from the original website. Some features are disabled, such as online bookings, because this is a proof of concept website.',
+    'footer.rights':'Built by <a href="https://travanixlabs.com/" target="_blank" rel="noopener">Travanix Labs</a> as a proof of concept. Not affiliated with, updated, or moderated by the owners of Ginza Empire. Content is automatically updated from the original website. Some features, despite functional, are only proof of concept ~ for example making a booking, is functional but not a "real" booking.',
     'footer.privacy':'本网站使用匿名分析来了解访客趋势。不收集个人信息，也不与第三方共享。',
     /* Back to top / compare */
     'ui.backToTop':'返回顶部',

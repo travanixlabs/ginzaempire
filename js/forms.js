@@ -243,15 +243,18 @@ function renderBkEnqReview(){
 function _showBookingDisclaimer(){
   return new Promise(resolve=>{
     const overlay=document.createElement('div');
-    overlay.style.cssText='display:flex;align-items:center;justify-content:center;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px)';
-    overlay.innerHTML=`<div style="background:#13131e;border:1px solid rgba(180,74,255,0.35);padding:32px 28px;max-width:420px;width:90%;font-family:'Rajdhani',sans-serif;text-align:center;box-shadow:0 0 40px rgba(180,74,255,0.15)">
-      <div style="font-size:18px;letter-spacing:2px;color:#fff;margin-bottom:14px;text-transform:uppercase">Notice</div>
-      <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;margin:0 0 22px">This is just a proof of concept. Making a booking here is not official. Please contact Ginza Empire directly.</p>
-      <div style="display:flex;gap:12px;justify-content:center">
-        <button id="_pocCancel" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);color:#fff;font-family:'Rajdhani',sans-serif;font-size:14px;letter-spacing:2px;padding:8px 24px;cursor:pointer;text-transform:uppercase">Cancel</button>
-        <button id="_pocContinue" style="background:rgba(180,74,255,0.18);border:1px solid rgba(180,74,255,0.45);color:#fff;font-family:'Rajdhani',sans-serif;font-size:14px;letter-spacing:2px;padding:8px 24px;cursor:pointer;text-transform:uppercase">I Understand, Continue</button>
-      </div>
-    </div>`;
+    overlay.style.cssText='display:flex;align-items:center;justify-content:center;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,0.85);cursor:default';
+    const panel=document.createElement('div');
+    panel.className='bk-enq-panel';
+    panel.style.cssText='max-width:420px;width:90%;text-align:center;padding:32px 28px';
+    panel.innerHTML=`<div class="bk-enq-hd"><div class="bk-enq-title" style="font-size:13px;letter-spacing:3px">Proof of Concept Notice</div></div>
+      <div class="home-divider-sm" style="margin:0 auto"></div>
+      <p class="home-summary" style="font-size:14px;line-height:1.6;margin:0">This is just a proof of concept. Making a booking here is not official. Please contact Ginza Empire directly.</p>
+      <div class="bk-enq-actions bk-enq-actions-3" style="margin-top:8px">
+        <button class="btn btn-secondary" id="_pocCancel">Cancel</button>
+        <button class="btn btn-primary" id="_pocContinue">I Understand</button>
+      </div>`;
+    overlay.appendChild(panel);
     document.body.appendChild(overlay);
     overlay.querySelector('#_pocCancel').onclick=()=>{overlay.remove();resolve(false)};
     overlay.querySelector('#_pocContinue').onclick=()=>{overlay.remove();resolve(true)};
