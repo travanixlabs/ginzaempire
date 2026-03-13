@@ -1511,5 +1511,28 @@
     "uuid": "v_mmoa0gvd_0yej80pt",
     "timestamp": "2026-03-13T02:42:24.087Z",
     "profile": "Amu"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmoa0gvd_0yej80pt",
+    "timestamp": "2026-03-13T02:41:00.694Z",
+    "page": "favorites"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmoa0gvd_0yej80pt",
+    "timestamp": "2026-03-13T02:48:20.591Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/girls/Amu",
+    "referrer": "https://ginzaempire.com/girls/Amu",
+    "screen": "2560x1440",
+    "viewport": "2560x1305",
+    "siteLang": "en"
   }
 ]
