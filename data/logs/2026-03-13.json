@@ -1854,5 +1854,11 @@
     "uuid": "v_mmo9usvl_tjs1s5q3",
     "timestamp": "2026-03-13T03:19:57.831Z",
     "page": "employment"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmo9usvl_tjs1s5q3",
+    "timestamp": "2026-03-13T03:20:00.251Z",
+    "page": "home"
   }
 ]
