@@ -913,5 +913,11 @@
     "uuid": "v_mmo99t9t_mkpgl2gb",
     "timestamp": "2026-03-13T02:13:11.304Z",
     "page": "calendar"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmo99t9t_mkpgl2gb",
+    "timestamp": "2026-03-13T02:13:30.258Z",
+    "page": "bookings"
   }
 ]
