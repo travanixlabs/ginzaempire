@@ -243,8 +243,7 @@ function renderBkEnqReview(){
 function _showBookingDisclaimer(){
   return new Promise(resolve=>{
     const overlay=document.createElement('div');
-    overlay.className='modal-overlay';
-    overlay.style.cssText='display:flex;align-items:center;justify-content:center;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,0.7)';
+    overlay.style.cssText='display:flex;align-items:center;justify-content:center;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px)';
     overlay.innerHTML=`<div style="background:#13131e;border:1px solid rgba(180,74,255,0.35);padding:32px 28px;max-width:420px;width:90%;font-family:'Rajdhani',sans-serif;text-align:center;box-shadow:0 0 40px rgba(180,74,255,0.15)">
       <div style="font-size:18px;letter-spacing:2px;color:#fff;margin-bottom:14px;text-transform:uppercase">Notice</div>
       <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;margin:0 0 22px">This is just a proof of concept. Making a booking here is not official. Please contact Ginza Empire directly.</p>
