@@ -1505,5 +1505,11 @@
     "uuid": "v_mmoa0gvd_0yej80pt",
     "timestamp": "2026-03-13T02:42:21.413Z",
     "page": "roster"
+  },
+  {
+    "type": "profileView",
+    "uuid": "v_mmoa0gvd_0yej80pt",
+    "timestamp": "2026-03-13T02:42:24.087Z",
+    "profile": "Amu"
   }
 ]
