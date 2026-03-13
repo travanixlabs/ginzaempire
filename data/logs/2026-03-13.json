@@ -1790,5 +1790,11 @@
     "uuid": "v_mmoa0gvd_0yej80pt",
     "timestamp": "2026-03-13T03:18:00.941Z",
     "page": "vacation"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmoa0gvd_0yej80pt",
+    "timestamp": "2026-03-13T03:18:03.856Z",
+    "page": "home"
   }
 ]
