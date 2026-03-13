@@ -2138,5 +2138,22 @@
     "screen": "1366x768",
     "viewport": "1366x768",
     "siteLang": "en"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmof4f17_1xmla5o0",
+    "timestamp": "2026-03-13T04:50:10.075Z",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+    "browser": "Unknown",
+    "os": "macOS",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "UTC",
+    "tzOffset": 0,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "375x812",
+    "viewport": "375x812",
+    "siteLang": "en"
   }
 ]
