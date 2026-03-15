@@ -282,5 +282,11 @@
     "uuid": "v_mmrh202j_sku69w9d",
     "timestamp": "2026-03-15T08:09:15.301Z",
     "profile": "Kirara"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmrh202j_sku69w9d",
+    "timestamp": "2026-03-15T08:09:21.064Z",
+    "page": "roster"
   }
 ]
