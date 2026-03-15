@@ -270,5 +270,11 @@
     "screen": "1680x1050",
     "viewport": "1503x798",
     "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmrh202j_sku69w9d",
+    "timestamp": "2026-03-15T08:08:51.370Z",
+    "page": "roster"
   }
 ]
