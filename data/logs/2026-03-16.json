@@ -212,5 +212,17 @@
     "screen": "1920x1080",
     "viewport": "1920x919",
     "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmscobz1_1b0oz79h",
+    "timestamp": "2026-03-15T22:52:55.017Z",
+    "page": "list"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmscobz1_1b0oz79h",
+    "timestamp": "2026-03-15T22:52:56.763Z",
+    "page": "roster"
   }
 ]
