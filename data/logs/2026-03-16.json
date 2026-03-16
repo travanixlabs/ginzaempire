@@ -334,5 +334,11 @@
     "uuid": "v_mmsx2e5c_dg8i16m1",
     "timestamp": "2026-03-16T08:24:26.577Z",
     "profile": "Sarah"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmsx2e5c_dg8i16m1",
+    "timestamp": "2026-03-16T08:24:30.425Z",
+    "page": "home"
   }
 ]
