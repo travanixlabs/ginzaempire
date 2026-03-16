@@ -382,5 +382,11 @@
     "uuid": "v_mmsx2e5c_dg8i16m1",
     "timestamp": "2026-03-16T08:25:43.626Z",
     "profile": "Grace"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmsx2e5c_dg8i16m1",
+    "timestamp": "2026-03-16T08:25:46.944Z",
+    "page": "list"
   }
 ]
