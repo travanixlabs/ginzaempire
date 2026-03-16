@@ -287,5 +287,22 @@
     "uuid": "v_mmsq20j5_0lf10oy8",
     "timestamp": "2026-03-16T05:07:55.815Z",
     "profile": "Chloe"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmsx2e5c_dg8i16m1",
+    "timestamp": "2026-03-16T08:23:33.408Z",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 26_1_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/145.0.7632.108 Mobile/15E148 Safari/604.1",
+    "browser": "Safari",
+    "os": "macOS",
+    "device": "Desktop",
+    "language": "en-AU",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/",
+    "referrer": "https://www.google.com/",
+    "screen": "430x932",
+    "viewport": "430x745",
+    "siteLang": "en"
   }
 ]
