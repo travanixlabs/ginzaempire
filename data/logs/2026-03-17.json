@@ -410,5 +410,22 @@
     "uuid": "v_mmoa0gvd_0yej80pt",
     "timestamp": "2026-03-17T09:19:54.327Z",
     "page": "roster"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmujzse2_52ihffey",
+    "timestamp": "2026-03-17T11:53:09.242Z",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 26_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/146.0.7680.40 Mobile/15E148 Safari/604.1",
+    "browser": "Safari",
+    "os": "macOS",
+    "device": "Desktop",
+    "language": "en-AU",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/girls/IU",
+    "referrer": "https://ginzaempire.com/girls/IU",
+    "screen": "430x932",
+    "viewport": "430x745",
+    "siteLang": "en"
   }
 ]
