@@ -15,5 +15,22 @@
     "screen": "780x493",
     "viewport": "780x493",
     "siteLang": "en"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmuyxocw_6loqopp6",
+    "timestamp": "2026-03-17T18:51:24.944Z",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/138.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Linux",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Etc/Unknown",
+    "tzOffset": 0,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "780x493",
+    "viewport": "780x493",
+    "siteLang": "en"
   }
 ]
