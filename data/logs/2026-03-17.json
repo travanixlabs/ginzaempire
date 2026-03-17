@@ -177,5 +177,13 @@
     "uuid": "v_mmtynwql_nu3r35n1",
     "timestamp": "2026-03-17T01:58:59.066Z",
     "page": "list"
+  },
+  {
+    "type": "filterUse",
+    "uuid": "v_mmtynwql_nu3r35n1",
+    "timestamp": "2026-03-17T01:59:48.045Z",
+    "active": [
+      "country"
+    ]
   }
 ]
