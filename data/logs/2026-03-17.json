@@ -293,5 +293,11 @@
     "uuid": "v_mmu7dxgk_sewpn1p3",
     "timestamp": "2026-03-17T06:00:50.920Z",
     "profile": "Honoka"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmu7dxgk_sewpn1p3",
+    "timestamp": "2026-03-17T06:01:05.800Z",
+    "page": "list"
   }
 ]
