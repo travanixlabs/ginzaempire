@@ -153,5 +153,23 @@
     "uuid": "v_mmtynwql_nu3r35n1",
     "timestamp": "2026-03-17T01:58:12.452Z",
     "page": "list"
+  },
+  {
+    "type": "profileView",
+    "uuid": "v_mmtynwql_nu3r35n1",
+    "timestamp": "2026-03-17T01:58:49.523Z",
+    "profile": "Misa"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmtynwql_nu3r35n1",
+    "timestamp": "2026-03-17T01:58:51.152Z",
+    "page": "list"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmtynwql_nu3r35n1",
+    "timestamp": "2026-03-17T01:58:52.416Z",
+    "page": "home"
   }
 ]
