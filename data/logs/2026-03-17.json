@@ -334,5 +334,11 @@
     "uuid": "v_mmu95uhk_78avf50v",
     "timestamp": "2026-03-17T06:51:18.320Z",
     "page": "list"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmu95uhk_78avf50v",
+    "timestamp": "2026-03-17T06:51:27.364Z",
+    "page": "roster"
   }
 ]
