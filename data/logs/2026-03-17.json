@@ -358,5 +358,11 @@
     "uuid": "v_mmu95uhk_78avf50v",
     "timestamp": "2026-03-17T06:52:09.784Z",
     "page": "roster"
+  },
+  {
+    "type": "profileView",
+    "uuid": "v_mmu95uhk_78avf50v",
+    "timestamp": "2026-03-17T06:52:27.747Z",
+    "profile": "Kirara"
   }
 ]
