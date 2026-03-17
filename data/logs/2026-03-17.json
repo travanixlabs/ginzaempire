@@ -235,5 +235,22 @@
     "uuid": "v_mmtynwql_nu3r35n1",
     "timestamp": "2026-03-17T02:08:41.482Z",
     "profile": "Kanami"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmu1bowr_yhr736me",
+    "timestamp": "2026-03-17T03:10:31.899Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-AU",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "1536x864",
+    "viewport": "1536x730",
+    "siteLang": "en"
   }
 ]
