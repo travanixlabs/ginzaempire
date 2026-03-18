@@ -199,5 +199,11 @@
     "uuid": "v_mmoa0gvd_0yej80pt",
     "timestamp": "2026-03-18T10:00:54.493Z",
     "profile": "Lina"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmoa0gvd_0yej80pt",
+    "timestamp": "2026-03-18T10:01:04.798Z",
+    "page": "home"
   }
 ]
