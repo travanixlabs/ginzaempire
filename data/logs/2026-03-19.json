@@ -1,0 +1,19 @@
+[
+  {
+    "type": "session",
+    "uuid": "v_mmw3ng65_aux46li3",
+    "timestamp": "2026-03-18T13:51:12.029Z",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15 (Applebot/0.1; +http://www.apple.com/go/applebot)",
+    "browser": "Safari",
+    "os": "macOS",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "UTC",
+    "tzOffset": 0,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "1920x1080",
+    "viewport": "1920x1080",
+    "siteLang": "en"
+  }
+]
