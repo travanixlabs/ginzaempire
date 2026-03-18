@@ -223,5 +223,11 @@
     "uuid": "v_mmoa0gvd_0yej80pt",
     "timestamp": "2026-03-18T10:01:16.230Z",
     "page": "roster"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmoa0gvd_0yej80pt",
+    "timestamp": "2026-03-18T10:03:27.317Z",
+    "page": "value"
   }
 ]
