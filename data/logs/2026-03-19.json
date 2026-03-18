@@ -107,5 +107,22 @@
     "screen": "1920x1080",
     "viewport": "1920x1080",
     "siteLang": "en"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmwp8ata_5crblovx",
+    "timestamp": "2026-03-18T23:55:16.799Z",
+    "userAgent": "Mozilla/5.0 (Linux; arm_64; Android 15; 23124RA7EO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.7444.1035 YaSearchBrowser/25.124.1 BroPP/1.0 YaSearchApp/25.124.1 webOmni Mobile Safari/537.36",
+    "browser": "Chrome",
+    "os": "Android",
+    "device": "Mobile",
+    "language": "it-IT",
+    "timezone": "Europe/Rome",
+    "tzOffset": -60,
+    "page": "/?embed",
+    "referrer": "http://travanixlabs.com/",
+    "screen": "1024x898",
+    "viewport": "1440x2000",
+    "siteLang": "en"
   }
 ]
