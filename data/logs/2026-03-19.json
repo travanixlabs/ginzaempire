@@ -319,5 +319,11 @@
     "uuid": "v_mmx0p4lr_hvkv28d3",
     "timestamp": "2026-03-19T05:16:37.193Z",
     "profile": "Sooyeon"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmx0p4lr_hvkv28d3",
+    "timestamp": "2026-03-19T05:16:58.916Z",
+    "page": "roster"
   }
 ]
