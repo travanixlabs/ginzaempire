@@ -354,5 +354,28 @@
     "screen": "1024x1024",
     "viewport": "1024x1024",
     "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmoa0gvd_0yej80pt",
+    "timestamp": "2026-03-18T10:00:50.883Z",
+    "page": "home"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmoa0gvd_0yej80pt",
+    "timestamp": "2026-03-19T09:31:42.747Z",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Windows",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "2560x1440",
+    "viewport": "2560x1305",
+    "siteLang": "en"
   }
 ]
