@@ -181,5 +181,22 @@
     "uuid": "v_mmwvvv9z_iy14e9jk",
     "timestamp": "2026-03-19T03:01:47.663Z",
     "page": "roster"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmwwy1u9_b1qofwqv",
+    "timestamp": "2026-03-19T03:31:15.537Z",
+    "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Mobile Safari/537.36",
+    "browser": "Chrome",
+    "os": "Android",
+    "device": "Mobile",
+    "language": "en-AU",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/",
+    "referrer": "https://www.google.com/",
+    "screen": "412x892",
+    "viewport": "411x755",
+    "siteLang": "en"
   }
 ]
