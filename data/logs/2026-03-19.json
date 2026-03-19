@@ -158,5 +158,22 @@
     "screen": "800x600",
     "viewport": "1024x12140",
     "siteLang": "en"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmwvvv9z_iy14e9jk",
+    "timestamp": "2026-03-19T03:01:34.103Z",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/146.0.7680.40 Mobile/15E148 Safari/604.1",
+    "browser": "Safari",
+    "os": "macOS",
+    "device": "Desktop",
+    "language": "en-AU",
+    "timezone": "Australia/Sydney",
+    "tzOffset": -660,
+    "page": "/",
+    "referrer": "https://www.google.com/",
+    "screen": "430x932",
+    "viewport": "430x745",
+    "siteLang": "en"
   }
 ]
