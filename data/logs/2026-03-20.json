@@ -226,5 +226,22 @@
     "screen": "1024x1024",
     "viewport": "1024x1024",
     "siteLang": "en"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmypjdx2_7mcn2btd",
+    "timestamp": "2026-03-20T09:39:26.390Z",
+    "userAgent": "Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)",
+    "browser": "Unknown",
+    "os": "Unknown",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "UTC",
+    "tzOffset": 0,
+    "page": "/",
+    "referrer": "direct",
+    "screen": "800x600",
+    "viewport": "1024x12140",
+    "siteLang": "en"
   }
 ]
