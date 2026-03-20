@@ -39,5 +39,11 @@
     "uuid": "v_mmywpu96_rpo4xzg4",
     "timestamp": "2026-03-20T13:03:07.386Z",
     "page": "employment"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmywpu96_rpo4xzg4",
+    "timestamp": "2026-03-20T13:03:14.423Z",
+    "page": "roster"
   }
 ]
