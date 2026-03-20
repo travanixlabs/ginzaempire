@@ -15,5 +15,11 @@
     "screen": "390x844",
     "viewport": "390x699",
     "siteLang": "en"
+  },
+  {
+    "type": "pageView",
+    "uuid": "v_mmywpu96_rpo4xzg4",
+    "timestamp": "2026-03-20T13:00:53.498Z",
+    "page": "roster"
   }
 ]
