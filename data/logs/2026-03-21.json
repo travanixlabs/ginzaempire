@@ -45,5 +45,22 @@
     "uuid": "v_mmywpu96_rpo4xzg4",
     "timestamp": "2026-03-20T13:03:14.423Z",
     "page": "roster"
+  },
+  {
+    "type": "session",
+    "uuid": "v_mmzmzf4e_v9likong",
+    "timestamp": "2026-03-21T01:15:41.775Z",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    "browser": "Chrome",
+    "os": "Linux",
+    "device": "Desktop",
+    "language": "en-US",
+    "timezone": "Etc/Unknown",
+    "tzOffset": 0,
+    "page": "/?embed",
+    "referrer": "http://travanixlabs.com/",
+    "screen": "800x600",
+    "viewport": "1440x2000",
+    "siteLang": "en"
   }
 ]
